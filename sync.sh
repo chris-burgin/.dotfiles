@@ -7,7 +7,7 @@ cp -f ~/.tmux.conf .
 cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
 cp -f ~/.config/i3/config i3config
-cp -f ~/etc/i3status.conf .
+cp -f /etc/i3status.conf .
 
 # check if there are changes
 if [[ -z $(git status -s) ]] 
