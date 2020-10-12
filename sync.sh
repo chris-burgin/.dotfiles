@@ -18,7 +18,8 @@ else
 	git commit -m "sync"
 	if git push # check for errors while pushing
 	then
-		notify-send 'Backup Successful ✅'	else
+		notify-send 'Backup Successful ✅'	
+  else
 		notify-send 'Backup Failed ⚠️'
 	fi
 fi 
