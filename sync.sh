@@ -18,7 +18,7 @@ else
 	git commit -m "sync"
 	if git push # check for errors while pushing
 	then
-		osascript -e "Backup Successful ✅"	else
-		osascript -e "Backup Failed ⚠️"
+		notify-send "Backup Successful ✅"	else
+		notify-send "Backup Failed ⚠️"
 	fi
 fi 
