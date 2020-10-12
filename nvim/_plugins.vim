@@ -38,7 +38,7 @@ let g:airline_theme='papercolor'
 let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 
-nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files{}<CR>
+nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({}))<CR>
 nnoremap <Leader>f <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 
 " prettier
