@@ -63,7 +63,6 @@ autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
   }
 END
 
-
 " folding using treesitter
 set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
