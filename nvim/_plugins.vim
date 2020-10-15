@@ -46,6 +46,7 @@ nnoremap <Leader>f <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
 " treesitter - not required
+" run TSInstall all
 :lua << END
   require'nvim-treesitter.configs'.setup {
     ensure_installed = "all",
