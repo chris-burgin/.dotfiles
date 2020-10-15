@@ -9,7 +9,6 @@ Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
 Plug 'neovim/nvim-lsp'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
@@ -46,7 +45,7 @@ nnoremap <Leader>f <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 " prettier
 autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
-" treesitter
+" treesitter - not required
 :lua << END
   require'nvim-treesitter.configs'.setup {
     ensure_installed = "all",
@@ -68,14 +67,16 @@ set foldmethod=expr
 set foldexpr=nvim_treesitter#foldexpr()
 
 " lsp completion
+" You need to run `:LspInstall [language]` to get started with the language
+" below or follow the install instructions for each language here: https://github.com/neovim/nvim-lspconfig#configurations
 :lua << END
-  require'nvim_lsp'.cssls.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.gopls.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.tsserver.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.vuels.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.rls.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.sumneko_lua.setup{on_attach=require'diagnostic'.on_attach}
-  require'nvim_lsp'.vimls.setup{on_attach=require'diagnostic'.on_attach}
+  require'nvim_lsp'.cssls.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.gopls.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.tsserver.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.vuels.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.rls.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.sumneko_lua.setup{on_attach=require'completion'.on_attach}
+  require'nvim_lsp'.vimls.setup{on_attach=require'completion'.on_attach}
 END
 
 nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>

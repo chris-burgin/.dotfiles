@@ -197,4 +197,5 @@ bindsym Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screens
 bindsym Mod4+Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
 
 # startup apps
+exec compton
 exec sh ~/scripts/startup.sh
