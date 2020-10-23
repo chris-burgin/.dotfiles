@@ -12,7 +12,7 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
-Plug 'nvim-treesitter/nvim-treesitter'
+" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -21,6 +21,8 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 set t_Co=256
@@ -47,21 +49,21 @@ autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
 " treesitter - not required
 " run TSInstall all
-:lua << END
-  require'nvim-treesitter.configs'.setup {
-    ensure_installed = "all",
-    highlight = {
-      enable = true,
-    },
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = "gnn",
-        node_incremental = "gnr",
-      },
-    },
-  }
-END
+" :lua << END
+"   require'nvim-treesitter.configs'.setup {
+"     ensure_installed = "all",
+"     highlight = {
+"       enable = true,
+"     },
+"     incremental_selection = {
+"       enable = true,
+"       keymaps = {
+"         init_selection = "gnn",
+"         node_incremental = "gnr",
+"       },
+"     },
+"   }
+" END
 
 " folding using treesitter
 set foldmethod=expr
