@@ -12,7 +12,6 @@ Plug 'nvim-lua/completion-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
-" Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'tommcdo/vim-exchange'
 Plug 'tpope/vim-commentary'
@@ -47,28 +46,6 @@ nnoremap <Leader>f <cmd>lua require'telescope.builtin'.live_grep{}<CR>
 " prettier
 autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
-" treesitter - not required
-" run TSInstall all
-" :lua << END
-"   require'nvim-treesitter.configs'.setup {
-"     ensure_installed = "all",
-"     highlight = {
-"       enable = true,
-"     },
-"     incremental_selection = {
-"       enable = true,
-"       keymaps = {
-"         init_selection = "gnn",
-"         node_incremental = "gnr",
-"       },
-"     },
-"   }
-" END
-
-" folding using treesitter
-set foldmethod=expr
-set foldexpr=nvim_treesitter#foldexpr()
-
 " lsp completion
 " You need to run `:LspInstall [language]` to get started with the language
 " below or follow the install instructions for each language here: https://github.com/neovim/nvim-lspconfig#configurations
@@ -80,6 +57,47 @@ set foldexpr=nvim_treesitter#foldexpr()
   require'nvim_lsp'.rls.setup{on_attach=require'completion'.on_attach}
   require'nvim_lsp'.sumneko_lua.setup{on_attach=require'completion'.on_attach}
   require'nvim_lsp'.vimls.setup{on_attach=require'completion'.on_attach}
+  
+ -- require'nvim_lsp'.diagnosticls.setup{
+ --   filetypes = { "javascript", "javascript.jsx", "typescript", "typescript.tsx", "typescriptreact" },
+ --   init_options = {
+ --     filetypes = {
+ --       javascript = "eslint",
+ --       ["javascript.jsx"] = "eslint",
+ --       javascriptreact = "eslint",
+ --       typescriptreact = "eslint",
+ --       typescript = "eslint",
+ --     },
+ --     linters = {
+ --       eslint = {
+ --         sourceName = "eslint",
+ --         command = "./node_modules/.bin/eslint",
+ --         rootPatterns = { ".git" },
+ --         debounce = 100,
+ --         args = {
+ --           "--stdin",
+ --           "--stdin-filename",
+ --           "%filepath",
+ --           "--format",
+ --           "json",
+ --         },
+ --         parseJson = {
+ --           errorsRoot = "[0].messages",
+ --           line = "line",
+ --           column = "column",
+ --           endLine = "endLine",
+ --           endColumn = "endColumn",
+ --           message = "${message} [${ruleId}]",
+ --           security = "severity",
+ --         };
+ --         securities = {
+ --           [2] = "error",
+ --           [1] = "warning"
+ --         }
+ --       }
+ --     }
+ --   }
+ -- }
 END
 
 nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
@@ -91,16 +109,9 @@ nnoremap <silent> gr    <cmd>lua require'telescope.builtin'.lsp_references{}<CR>
 nnoremap <silent> gy    <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> qf    <cmd>lua vim.lsp.buf.code_action()<CR>
 
+
 " set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect
 
 " avoid showing message extra message when using completion
 set shortmess+=c
-
-" show diagnostic messages inline
-let g:diagnostic_enable_virtual_text = 1 
-
-" diagnostic commands
-noremap <leader>do :OpenDiagnostic<CR>
-noremap <leader>] :NextDiagnosticCycle<CR>
-noremap <leader>[ :PrevDiagnosticCycle<CR>
