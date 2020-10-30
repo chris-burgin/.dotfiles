@@ -11,7 +11,7 @@ cp -f ~/.config/i3/config i3config
 cp -f /etc/i3status.conf .
 cp -f ~/.Xresources .
 cp -f ~/.xprofile .
-cp -f /etc/X11/xorg.conf.d/30-touchpad.conf .
+cp -f /etc/X11/xorg.conf.d/99-libinput.conf .
 
 # check if there are changes
 if [[ -z $(git status -s) ]] 
