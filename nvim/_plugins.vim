@@ -57,47 +57,6 @@ autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
   require'nvim_lsp'.rls.setup{on_attach=require'completion'.on_attach}
   require'nvim_lsp'.sumneko_lua.setup{on_attach=require'completion'.on_attach}
   require'nvim_lsp'.vimls.setup{on_attach=require'completion'.on_attach}
-  
- -- require'nvim_lsp'.diagnosticls.setup{
- --   filetypes = { "javascript", "javascript.jsx", "typescript", "typescript.tsx", "typescriptreact" },
- --   init_options = {
- --     filetypes = {
- --       javascript = "eslint",
- --       ["javascript.jsx"] = "eslint",
- --       javascriptreact = "eslint",
- --       typescriptreact = "eslint",
- --       typescript = "eslint",
- --     },
- --     linters = {
- --       eslint = {
- --         sourceName = "eslint",
- --         command = "./node_modules/.bin/eslint",
- --         rootPatterns = { ".git" },
- --         debounce = 100,
- --         args = {
- --           "--stdin",
- --           "--stdin-filename",
- --           "%filepath",
- --           "--format",
- --           "json",
- --         },
- --         parseJson = {
- --           errorsRoot = "[0].messages",
- --           line = "line",
- --           column = "column",
- --           endLine = "endLine",
- --           endColumn = "endColumn",
- --           message = "${message} [${ruleId}]",
- --           security = "severity",
- --         };
- --         securities = {
- --           [2] = "error",
- --           [1] = "warning"
- --         }
- --       }
- --     }
- --   }
- -- }
 END
 
 nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
