@@ -10,7 +10,7 @@ cp -f ~/.alacritty.yml .
 cp -f ~/.config/i3/config i3config
 cp -f /etc/i3status.conf .
 cp -f ~/.Xresources .
-cp -f ~/.Xprofile .
+cp -f ~/.xprofile .
 cp -f /etc/X11/xorg.conf.d/30-touchpad.conf .
 
 # check if there are changes
