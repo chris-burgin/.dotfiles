@@ -78,3 +78,6 @@ alias sb5="make run-server & make run-frontend-proxy-server"
 # core
 export coredir="/Users/chrisburgin/Development/core"
 alias cdcore="cd $coredir"
+
+# backup
+alias backup="sh ~/backup/sync.sh"
