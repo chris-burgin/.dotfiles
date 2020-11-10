@@ -32,6 +32,7 @@ export PATH=$PATH:$HOME/.yarn/bin
 
 # General
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
+alias szsh="source ~/.zshrc"
 alias portcheck="lsof -n | grep LISTEN"
 alias kw="ps -ax | grep -- --watch | awk '{print $1}' | xargs kill -15"
 
@@ -45,7 +46,6 @@ alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dps="docker-compose ps"
 alias ds="sudo systemctl start docker"
-
 
 # fzf ignore dirs
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude dist'
@@ -70,6 +70,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # B5
+export B5_ENABLE_HOT_RELOAD="true"
+export B5_PROXY_BASE_URL="b5local.com:4000"
 export B5THROTTLER_ENABLED='true'
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
