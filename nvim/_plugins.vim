@@ -7,8 +7,8 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
-Plug 'neovim/nvim-lsp'
-Plug 'nvim-lua/completion-nvim'
+Plug 'neovim/nvim-lspconfig', { 'commit': 'bd7127daf7129b0f81d44980825da54ec0461ebe' }
+Plug 'nvim-lua/completion-nvim', { 'commit' : '3b6774ed1c1b4720efe3385f06883483f5e16884' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/telescope.nvim'
@@ -53,7 +53,7 @@ autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 "
 " For gopls you will need to install `golang-x-tools-gopls`.
 :lua << END
-  nvim_lsp = require "nvim_lsp"
+  nvim_lsp = require'nvim_lsp'
 
   nvim_lsp.cssls.setup{on_attach=require'completion'.on_attach}
   nvim_lsp.tsserver.setup{on_attach=require'completion'.on_attach}
