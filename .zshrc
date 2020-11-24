@@ -8,6 +8,9 @@ source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
+# path
+export PATH=$HOME/local/nvim/bin:$PATH
+
 # editor
 export EDITOR=nvim
 
@@ -54,11 +57,6 @@ export NVM_DIR="$HOME/.nvm"
 # B5
 export B5_ENABLE_HOT_RELOAD="true"
 export B5_PROXY_BASE_URL="b5local.com:4000"
-
-export B5STRIPE_ENABLED="true"
-export B5STRIPE_PRIVATEKEY="sk_test_58pnbxcpWSPZu9mFrOOteP3Q00qqvdmtnw"
-export B5STRIPE_PUBLICKEY="pk_test_TVY3u1TT7m05JWZz2TXVc11800gbd4IFzu"
-export B5STRIPE_VERIFYEVENTS="false"
 
 export B5THROTTLER_ENABLED='true'
 
