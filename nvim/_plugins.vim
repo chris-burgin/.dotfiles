@@ -24,6 +24,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" Custom Lua Plugins
+lua require 'functions'
+
 set t_Co=256
 
 " light
@@ -40,11 +43,8 @@ let g:airline_theme='papercolor'
 let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 
-nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({previewer = false}))<CR>
-nnoremap <Leader>f <cmd>lua require'telescope.builtin'.live_grep{}<CR>
-
 " prettier
-autocmd BufWritePre *.js,*.ts,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
+autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
 " lsp completion
 " You need to run `:LspInstall [language]` to get started with the language
@@ -72,6 +72,9 @@ nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> gr    <cmd>lua require'telescope.builtin'.lsp_references{}<CR>
 nnoremap <silent> gy    <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> qf    <cmd>lua vim.lsp.buf.code_action()<CR>
+
+" telescope remaps
+nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({previewer = false}))<CR>
 
 " set completeopt to have a better completion experience
 set completeopt=menuone,noinsert,noselect

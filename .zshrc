@@ -31,7 +31,7 @@ alias dc="docker-compose"
 alias dcu="docker-compose up -d"
 alias dcd="docker-compose down"
 alias dps="docker-compose ps"
-alias ds="sudo systemctl start docker"
+alias ds="sudo systemctl start docker && dcu"
 
 # fzf
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude dist'
@@ -64,6 +64,7 @@ export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 
 alias sb5="make run-server & make run-frontend-proxy-server"
+alias eb5="tmuxinator start b5"
 
 # core
 export coredir="/Users/chrisburgin/Development/core"
