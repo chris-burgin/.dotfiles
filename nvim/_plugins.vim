@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'christoomey/vim-tmux-navigator'
-Plug 'gruvbox-community/gruvbox'
 Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
@@ -24,20 +23,12 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-" Custom Lua Plugins
-lua require 'functions'
 
+" theme
 set t_Co=256
-
-" light
 set background=light
 colorscheme PaperColor
 let g:airline_theme='papercolor'
-
-" dark theme
-" set background=dark
-" colorscheme GruvBox
-" let g:airline_theme='gruvbox'
 
 " airline
 let g:webdevicons_enable_airline_statusline = 1
