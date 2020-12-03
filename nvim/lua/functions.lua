@@ -1,25 +1,19 @@
--- local popup = require('popup') 
+function goimports(timeoutms)
+	local context = { source = { organizeImports = true } }
+	vim.validate { context = { context, "t", true } }
 
--- function map(tbl, f)
---     local t = {}
---     for k,v in pairs(tbl) do
---         t[k] = f(v)
---     end
---     return t
--- end
+	local params = vim.lsp.util.make_range_params()
+	params.context = context
 
--- function show_errors_select()
+	local method = "textDocument/codeAction"
+	local resp = vim.lsp.buf_request_sync(0, method, params, timeoutms)
+	if resp and resp[1] then
+		local result = resp[1].result
+		if result and result[1] then
+			local edit = result[1].edit
+			vim.lsp.util.apply_workspace_edit(edit)
+		end
+	end
 
--- end
-
--- function show_errors()
--- 	local errors = vim.lsp.diagnostic.get_all()
--- 	local string_errors = map(errors, function(error) return error.message end)
-
--- 	local opts = { }
--- 	local win_id = popup.create(string_errors, opts)
--- 	local buffer = vim.api.nvim_win_get_buf(win_id)
-
--- 	vim.api.nvim_buf_set_keymap(buffer, 'n', '<cr>', 'lua show_errors_select(), {}) 
--- end
-
+	vim.lsp.buf.formatting()
+end

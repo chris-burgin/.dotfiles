@@ -52,18 +52,9 @@ autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsy
 " https://github.com/neovim/nvim-lspconfig#configurations.
 "
 " For gopls you will need to install `golang-x-tools-gopls`.
-:lua << END
-  nvim_lsp = require'lspconfig'
+lua require'lsp_setup'
 
-  nvim_lsp.cssls.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.tsserver.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.vuels.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.rls.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.sumneko_lua.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.vimls.setup{on_attach=require'completion'.on_attach}
-  nvim_lsp.gopls.setup {on_attach=require'completion'.on_attach}
-END
-
+" lsp kep mapings
 nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
@@ -84,24 +75,5 @@ set shortmess+=c
 
 " golang sort imports
 :lua << END
-  function goimports(timeoutms)
-    local context = { source = { organizeImports = true } }
-    vim.validate { context = { context, "t", true } }
-
-    local params = vim.lsp.util.make_range_params()
-    params.context = context
-
-    local method = "textDocument/codeAction"
-    local resp = vim.lsp.buf_request_sync(0, method, params, timeoutms)
-    if resp and resp[1] then
-      local result = resp[1].result
-      if result and result[1] then
-        local edit = result[1].edit
-        vim.lsp.util.apply_workspace_edit(edit)
-      end
-    end
-
-    vim.lsp.buf.formatting()
-  end
 END
-autocmd BufWritePre *.go lua goimports(1000)
+autocmd BufWritePre *.go lua require'functions'goimports(1000)
