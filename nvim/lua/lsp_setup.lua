@@ -10,6 +10,16 @@ nvim_lsp.gopls.setup {on_attach=require'completion'.on_attach}
 
 nvim_lsp.diagnosticls.setup{
 	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" };
+	root_dir= nvim_lsp.util.root_pattern(
+		"bvt",
+		"client/src/js/app",
+		"client/src/key_reset_tests",
+		"client/src/tests",
+		"client/src/vendor/onepassword",
+		"client/src/vendor/test-rite",
+		"client/src/vendor/web-workers",
+		"scripts/team-builder"
+	);
 	init_options = {
 		filetypes = {
 			javascript = "eslint";
