@@ -74,6 +74,4 @@ set completeopt=menuone,noinsert,noselect
 set shortmess+=c
 
 " golang sort imports
-:lua << END
-END
 autocmd BufWritePre *.go lua require'functions'goimports(1000)
