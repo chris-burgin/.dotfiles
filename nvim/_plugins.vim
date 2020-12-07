@@ -49,8 +49,9 @@ lua require'lsp_setup'
 nnoremap <silent> <F2>  <cmd>lua vim.lsp.buf.rename()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
 nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> gF    <cmd>lua vim.lsp.buf.formatting_sync(nil, 1000)<CR>
 nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gn    <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
+nnoremap <silent> sd    <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
 nnoremap <silent> gr    <cmd>lua require'telescope.builtin'.lsp_references{}<CR>
 nnoremap <silent> gy    <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> qf    <cmd>lua vim.lsp.buf.code_action()<CR>
