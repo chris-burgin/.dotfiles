@@ -4,9 +4,6 @@ let g:netrw_sizestyle= "H" " show human readable file sizes
 let g:netrw_sort_options = "i" " ignore case when sorting
 let g:netrw_sort_sequence = '[\/]$,*,\.bak$,\.o$,\.h$,\.info$,\.swp$,\.obj$'
 
-" map keys
-imap <silent> jj <Esc>
-
 " tabs, most of this is controlled via 'tope/vim-sleuth'
 set tabstop=2
 set shiftwidth=2

@@ -6,9 +6,9 @@ require'nvim-treesitter.configs'.setup {
 	incremental_selection = {
     enable = true,
     keymaps = {
-      init_selection = "ss",
-      node_incremental = "si",
-      node_decremental = "sd",
+      init_selection = "gss",
+      node_incremental = "gsi",
+      node_decremental = "gsd",
     },
 		indent = {
 			enable = true,

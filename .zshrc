@@ -1,6 +1,5 @@
-ZSH_DISABLE_COMPFIX=true
-
 # zsh
+ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="robbyrussell"
 plugins=(git)
 export ZSH="/home/chrisburgin/.oh-my-zsh"
@@ -11,7 +10,7 @@ alias szsh="source ~/.zshrc"
 # path
 export PATH=$HOME/local/nvim/bin:$PATH
 
-# editor
+# editor: Used by tools to open your editor of choice.
 export EDITOR=nvim
 
 # golang
@@ -23,7 +22,7 @@ export GOBIN=$GOPATH/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
-# custom git
+# git: Custom git commands not added under the zsh git plugin.
  alias gpl="git pull"
 
 # docker
@@ -33,23 +32,23 @@ alias dcd="docker-compose down"
 alias dps="docker-compose ps"
 alias ds="sudo systemctl start docker && dcu"
 
-# fzf
+# fzf: All sort of magic! ctrl-r and ctrl-t to start!
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude dist'
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# ag
+# ag: Super fast searching.
 alias ag='ag --path-to-ignore ~/.ignore'
 
-# tmux
+# tmux: Terminal window manager.
 alias tpair='sudo tmux -S /tmp/pair new-session -d -s pair && sudo chmod 777 /tmp/pair'
 alias tpairattach='tmux -S /tmp/pair attach -t pair'
 alias tpairclose='tmux -S /tmp/pair kill-session -a'
 
-# bat
+# bat: Used by nvim for file preview. Handled highlighting.
 export BAT_THEME="base16"
 
-# nvim
+# NVM (node version manager): Allows quickly switching the node version.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -70,5 +69,5 @@ alias eb5="tmuxinator start b5"
 export coredir="/Users/chrisburgin/Development/core"
 alias cdcore="cd $coredir"
 
-# backup
+# backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
