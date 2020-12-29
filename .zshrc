@@ -41,6 +41,7 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias ag='ag --path-to-ignore ~/.ignore'
 
 # tmux: Terminal window manager.
+alias tux="tmuxinator"
 alias tpair='sudo tmux -S /tmp/pair new-session -d -s pair && sudo chmod 777 /tmp/pair'
 alias tpairattach='tmux -S /tmp/pair attach -t pair'
 alias tpairclose='tmux -S /tmp/pair kill-session -a'
@@ -71,3 +72,9 @@ alias cdcore="cd $coredir"
 
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
+
+# prayer app
+export db_username="root"
+export db_password=""
+export db_hostname="127.0.0.1"
+alias cdp="cd ~/go/src/github.com/chris-burgin/prayer_api"

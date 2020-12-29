@@ -1,67 +1,65 @@
-" netrw
+" netrw setup.
 let g:netrw_liststyle = 0
 let g:netrw_sizestyle= "H" " show human readable file sizes
 let g:netrw_sort_options = "i" " ignore case when sorting
 let g:netrw_sort_sequence = '[\/]$,*,\.bak$,\.o$,\.h$,\.info$,\.swp$,\.obj$'
 
-" tabs, most of this is controlled via 'tope/vim-sleuth'
+" Basic tabs setup.
 set tabstop=2
 set shiftwidth=2
 
-" line wrapping
+" Do not wrap lines.
 set nowrap
 
-" line numbers
+" Sets relative line numbers and showing the true line number on the active
+" line.
 set number relativenumber
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-" real time replace
+" Real time search and replace.
 set inccommand=split
 
-" split below and right
+" Split below and right.
 set splitbelow
 set splitright
 
-"split resize
+" Map arrow keys to resize splits.
 noremap <Left> :vertical resize +3<CR>
 noremap <Right> :vertical resize -3<CR>
 noremap <Up> :resize +3<CR>
 noremap <Down> :resize -3<CR>
 
-" dont resize for split
-set noea
+" Don't resize for splits when one is closed
+set noequalalways
 
-" dont abandom buffers when hidden
+" Don't abandom buffers when hidden.
 set hidden 
 
-" affects how long it takes coc or vim-go to notice changes
+" Time to write swap, speeds up many plugins.
 set updatetime=300
 
-" always show signcolumns
+" Always show the sign column to keep consistent spacing.
 set signcolumn=yes
 
-" highlight merge conflict markers
-match ErrorMsg '^\(<\|=\|>\)\{7\}\([^=].\+\)\?$'
-
-" Use esc to leave insert mode and go to normal mode while in :term
+" Use esc to leave insert mode and go to normal mode while using the built in
+" terminal.
 tnoremap <Esc> <C-\><C-n>
 
-" folding
+" Folding
 set foldmethod=syntax   
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 
-" searching
+" Searching
 set ignorecase
 set smartcase
 
-" cursor line
+" Highlight the current line the cursor is on.
 set cursorline
 
-" map Q to q to deal with typo
+" Map Q to q to deal with my constant fat fingering.
 command Q q
 
-" load other config files
+" Plugins have been broken out into their own config file.
 source $HOME/.config/nvim/_plugins.vim
-source $HOME/.config/nvim/_functions.vim

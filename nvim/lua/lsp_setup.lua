@@ -1,16 +1,22 @@
-nvim_lsp = require'lspconfig'
+-- You need to run `:LspInstall [language]` to get started with the language
+-- below or follow the install instructions for each language here:
+-- https://github.com/neovim/nvim-lspconfig#configurations.
+--
+-- For gopls you will need to install `golang-x-tools-gopls`.
 
-nvim_lsp.cssls.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.vuels.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.tsserver.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.rls.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.sumneko_lua.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.vimls.setup{on_attach=require'completion'.on_attach}
-nvim_lsp.gopls.setup {on_attach=require'completion'.on_attach}
+lspconfig = require'lspconfig'
 
-nvim_lsp.diagnosticls.setup{
+lspconfig.cssls.setup{on_attach=require'completion'.on_attach}
+lspconfig.vuels.setup{on_attach=require'completion'.on_attach}
+lspconfig.tsserver.setup{on_attach=require'completion'.on_attach}
+lspconfig.rls.setup{on_attach=require'completion'.on_attach}
+lspconfig.sumneko_lua.setup{on_attach=require'completion'.on_attach}
+lspconfig.vimls.setup{on_attach=require'completion'.on_attach}
+lspconfig.gopls.setup {on_attach=require'completion'.on_attach}
+
+lspconfig.diagnosticls.setup{
 	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" };
-	root_dir= nvim_lsp.util.root_pattern(
+	root_dir= lspconfig.util.root_pattern(
 		"bvt",
 		"client/src/js/app",
 		"client/src/key_reset_tests",
@@ -61,3 +67,20 @@ nvim_lsp.diagnosticls.setup{
 		};
 	}
 }
+
+-- mappings 
+vim.api.nvim_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true });
+
+-- -- hover style commands
+vim.api.nvim_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'sd', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', {noremap = true, silent = true });
+
+-- -- goto style commands
+vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = false, silent = true });
+vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'gY', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'gn', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua require\'telescope.builtin\'.lsp_references{}<CR>', {noremap = true, silent = true });
+
+-- autofix commands
+vim.api.nvim_set_keymap('n', 'qf', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true });
