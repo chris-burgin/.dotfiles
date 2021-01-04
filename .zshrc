@@ -12,6 +12,7 @@ export PATH=$HOME/local/nvim/bin:$PATH
 
 # editor: Used by tools to open your editor of choice.
 export EDITOR=nvim
+alias clearswap="rm -rf ~/.local/share/nvim/swap/*"
 
 # golang
 export GOPATH=$HOME/go
