@@ -14,60 +14,51 @@ lspconfig.sumneko_lua.setup{on_attach=require'completion'.on_attach}
 lspconfig.vimls.setup{on_attach=require'completion'.on_attach}
 lspconfig.gopls.setup {on_attach=require'completion'.on_attach}
 
--- removed until we fix our setup
--- lspconfig.diagnosticls.setup{
--- 	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" };
--- 	root_dir= lspconfig.util.root_pattern(
--- 		"bvt",
--- 		"client/src/js/app",
--- 		"client/src/key_reset_tests",
--- 		"client/src/tests",
--- 		"client/src/vendor/onepassword",
--- 		"client/src/vendor/test-rite",
--- 		"client/src/vendor/web-workers",
--- 		"scripts/team-builder"
--- 	);
--- 	init_options = {
--- 		filetypes = {
--- 			javascript = "eslint";
--- 			["javascript.jsx"] = "eslint";
--- 			javascriptreact = "eslint";
--- 			typescriptreact = "eslint";
--- 			typescript = "eslint";
--- 			typescriptreact = "eslint";
--- 		};
--- 		linters = {
--- 			eslint = {
--- 				sourceName = "eslint";
--- 				command = "eslint_d";
--- 				rootPatterns = { ".git" };
--- 				debounce = 100;
--- 				args = {
--- 					"--cache";
--- 					"--stdin";
--- 					"--stdin-filename";
--- 					"%filepath";
--- 					"--format";
--- 					"json";
--- 				};
--- 				sourceName = "eslint";
--- 				parseJson = {
--- 					errorsRoot = "[0].messages";
--- 					line = "line";
--- 					column = "column";
--- 					endLine = "endLine";
--- 					endColumn = "endColumn";
--- 					message = "${message} [${ruleId}]";
--- 					security = "severity";
--- 				};
--- 				securities = {
--- 					 [2] = "error";
--- 					 [1] = "warning";
--- 				};
--- 			};
--- 		};
--- 	}
--- }
+-- janky setup to work around our config. Looking for a directory below "app", in this case its src.
+lspconfig.diagnosticls.setup{
+	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" };
+	root_dir = lspconfig.util.root_pattern('src');
+	init_options = {
+		filetypes = {
+			javascript = "eslint";
+			["javascript.jsx"] = "eslint";
+			javascriptreact = "eslint";
+			typescriptreact = "eslint";
+			typescript = "eslint";
+			typescriptreact = "eslint";
+		};
+		linters = {
+			eslint = {
+				sourceName = "eslint";
+				command = "eslint_d";
+				rootPatterns = { "src" };
+				debounce = 100;
+				args = {
+					"--cache";
+					"--stdin";
+					"--stdin-filename";
+					"%filepath";
+					"--format";
+					"json";
+				};
+				sourceName = "eslint";
+				parseJson = {
+					errorsRoot = "[0].messages";
+					line = "line";
+					column = "column";
+					endLine = "endLine";
+					endColumn = "endColumn";
+					message = "${message} [${ruleId}]";
+					security = "severity";
+				};
+				securities = {
+					 [2] = "error";
+					 [1] = "warning";
+				};
+			};
+		};
+	}
+}
 
 -- mappings 
 vim.api.nvim_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true });
