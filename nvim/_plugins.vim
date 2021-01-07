@@ -30,6 +30,9 @@ let g:airline_theme='papercolor'
 let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 
+" turn of some indentation warnings that prettier handles
+let g:airline#extensions#whitespace#checks = ['trailing', 'long', 'conflicts']
+
 " prettier
 autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
