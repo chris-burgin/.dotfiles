@@ -195,6 +195,7 @@ client.unfocused            #e0ddd6    #e0ddd6     #000000
 # screenshots
 bindsym Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 ~/Pictures/Screenshot-$(date -Iseconds | cut -d'+' -f1).png"
 bindsym Mod4+Print exec "maim -u -s -n -l -c 0.157,0.333,0.466,0.4 | xclip -selection clipboard -t image/png"
+bindsym Mod4+Home exec "xrandr --output DP-0 --auto && sh ~/scripts/keyboard.setup.sh"
 
 # startup apps
 exec compton

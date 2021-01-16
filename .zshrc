@@ -56,7 +56,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # B5
-export B5_ENABLE_HOT_RELOAD="true"
+export B5_ENABLE_HOT_RELOAD="false"
 export B5_PROXY_BASE_URL="b5local.com:4000"
 
 export B5THROTTLER_ENABLED='true'

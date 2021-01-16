@@ -17,7 +17,7 @@ lspconfig.gopls.setup {on_attach=require'completion'.on_attach}
 -- janky setup to work around our config. Looking for a directory below "app", in this case its src.
 lspconfig.diagnosticls.setup{
 	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" };
-	root_dir = lspconfig.util.root_pattern('src');
+	-- root_dir = lspconfig.util.root_pattern('src');
 	init_options = {
 		filetypes = {
 			javascript = "eslint";
@@ -31,7 +31,8 @@ lspconfig.diagnosticls.setup{
 			eslint = {
 				sourceName = "eslint";
 				command = "eslint_d";
-				rootPatterns = { "src" };
+				-- rootPatterns = { "src" };
+				rootPatterns = { ".git" };
 				debounce = 100;
 				args = {
 					"--cache";
