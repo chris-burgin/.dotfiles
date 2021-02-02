@@ -20,34 +20,88 @@ font:
     family: Fira Code Retina
     
 # Colors (PaperColor - Light)
+# colors:
+#   # Default colors
+#   primary:
+#     background: '#eeeeee'
+#     foreground: '#444444'
+
+#   cursor:
+#     text: '#eeeeee'
+#     cursor: '#444444'
+
+#   # Normal colors
+#   normal:
+#     black:   '0xeeeeee'
+#     red:     '#af0000'
+#     green:   '0x008700'
+#     yellow:  '0x5f8700'
+#     blue:    '0x0087af'
+#     magenta: '0x878787'
+#     cyan:    '0x005f87'
+#     white:   '0x444444'
+
+#   # Bright colors
+#   bright:
+#     black:   '0xbcbcbc'
+#     red:     '#d70000'
+#     green:   '0xd70087'
+#     yellow:  '0x8700af'
+#     blue:    '0xd75f00'
+#     magenta: '0xd75f00'
+#     cyan:    '0x005faf'
+#     white:   '0x005f87'
+
 colors:
-  # Default colors
   primary:
-    background: '#eeeeee'
-    foreground: '#444444'
-
+    background: '0x282a36'
+    foreground: '0xf8f8f2'
   cursor:
-    text: '#eeeeee'
-    cursor: '#444444'
-
-  # Normal colors
+    text: CellBackground
+    cursor: CellForeground
+  vi_mode_cursor:
+    text: CellBackground
+    cursor: CellForeground
+  search:
+    matches:
+      foreground: '0x44475a'
+      background: '0x50fa7b'
+    focused_match:
+      foreground: '0x44475a'
+      background: '0xffb86c'
+    bar:
+      background: '0x282a36'
+      foreground: '0xf8f8f2'
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: CellForeground
+    background: '0x44475a'
   normal:
-    black:   '0xeeeeee'
-    red:     '#af0000'
-    green:   '0x008700'
-    yellow:  '0x5f8700'
-    blue:    '0x0087af'
-    magenta: '0x878787'
-    cyan:    '0x005f87'
-    white:   '0x444444'
-
-  # Bright colors
+    black:   '0x000000'
+    red:     '0xff5555'
+    green:   '0x50fa7b'
+    yellow:  '0xf1fa8c'
+    blue:    '0xbd93f9'
+    magenta: '0xff79c6'
+    cyan:    '0x8be9fd'
+    white:   '0xbfbfbf'
   bright:
-    black:   '0xbcbcbc'
-    red:     '#d70000'
-    green:   '0xd70087'
-    yellow:  '0x8700af'
-    blue:    '0xd75f00'
-    magenta: '0xd75f00'
-    cyan:    '0x005faf'
-    white:   '0x005f87'
+    black:   '0x4d4d4d'
+    red:     '0xff6e67'
+    green:   '0x5af78e'
+    yellow:  '0xf4f99d'
+    blue:    '0xcaa9fa'
+    magenta: '0xff92d0'
+    cyan:    '0x9aedfe'
+    white:   '0xe6e6e6'
+  dim:
+    black:   '0x14151b'
+    red:     '0xff2222'
+    green:   '0x1ef956'
+    yellow:  '0xebf85b'
+    blue:    '0x4d5b86'
+    magenta: '0xff46b0'
+    cyan:    '0x59dffc'
+    white:   '0xe6e6d1'

@@ -11,8 +11,7 @@ set shiftwidth=2
 " Do not wrap lines.
 set nowrap
 
-" Sets relative line numbers and showing the true line number on the active
-" line.
+" Sets relative line numbers and showing the true line number on the active line.
 set number relativenumber
 autocmd TermOpen * setlocal nonumber norelativenumber
 
@@ -60,6 +59,9 @@ set cursorline
 
 " Map Q to q to deal with my constant fat fingering.
 command Q q
+
+" fix color scheme problem
+let g:dracula_colorterm = 0
 
 " Plugins have been broken out into their own config file.
 source $HOME/.config/nvim/_plugins.vim
