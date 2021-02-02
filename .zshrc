@@ -9,6 +9,8 @@ alias szsh="source ~/.zshrc"
 
 # path
 export PATH=$HOME/local/nvim/bin:$PATH
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
+export MYSQL_ROOT_PASSWORD=""
 
 # editor: Used by tools to open your editor of choice.
 export EDITOR=nvim
@@ -27,11 +29,10 @@ export PATH=$PATH:$HOME/.yarn/bin
  alias gpl="git pull"
 
 # docker
-alias dc="docker-compose"
-alias dcu="docker-compose up -d"
-alias dcd="docker-compose down"
-alias dps="docker-compose ps"
-alias ds="sudo systemctl start docker && dcu"
+alias dc="sudo docker-compose"
+alias dcu="sudo docker-compose up -d"
+alias dcd="sudo docker-compose down"
+alias dps="sudo docker-compose ps"
 
 # fzf: All sort of magic! ctrl-r and ctrl-t to start!
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude node_modules --exclude dist'
@@ -42,7 +43,7 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 alias ag='ag --path-to-ignore ~/.ignore'
 
 # tmux: Terminal window manager.
-alias tux="tmuxinator"
+alias tmuxa="tmux a -t"
 alias tpair='sudo tmux -S /tmp/pair new-session -d -s pair && sudo chmod 777 /tmp/pair'
 alias tpairattach='tmux -S /tmp/pair attach -t pair'
 alias tpairclose='tmux -S /tmp/pair kill-session -a'
@@ -59,13 +60,12 @@ export NVM_DIR="$HOME/.nvm"
 export B5_ENABLE_HOT_RELOAD="false"
 export B5_PROXY_BASE_URL="b5local.com:4000"
 
-export B5THROTTLER_ENABLED='true'
+export B5THROTTLER_ENABLED='false'
 
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 
 alias sb5="make run-server & make run-frontend-proxy-server"
-alias eb5="tmuxinator start b5"
 
 # core
 export coredir="/Users/chrisburgin/Development/core"

@@ -9,10 +9,11 @@ lspconfig = require'lspconfig'
 lspconfig.cssls.setup{on_attach=require'completion'.on_attach}
 lspconfig.vuels.setup{on_attach=require'completion'.on_attach}
 lspconfig.tsserver.setup{on_attach=require'completion'.on_attach}
-lspconfig.rls.setup{on_attach=require'completion'.on_attach}
-lspconfig.sumneko_lua.setup{on_attach=require'completion'.on_attach}
+-- lspconfig.rls.setup{on_attach=require'completion'.on_attach}
+-- lspconfig.sumneko_lua.setup{on_attach=require'completion'.on_attach}
 lspconfig.vimls.setup{on_attach=require'completion'.on_attach}
 lspconfig.gopls.setup {on_attach=require'completion'.on_attach}
+lspconfig.cmake.setup {on_attach=require'completion'.on_attach}
 
 -- janky setup to work around our config. Looking for a directory below "app", in this case its src.
 lspconfig.diagnosticls.setup{
@@ -53,15 +54,15 @@ lspconfig.diagnosticls.setup{
 					security = "severity";
 				};
 				securities = {
-					 [2] = "error";
-					 [1] = "warning";
+					[2] = "error";
+					[1] = "warning";
 				};
 			};
 		};
 	}
 }
 
--- mappings 
+-- mappings
 vim.api.nvim_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true });
 
 -- -- hover style commands
@@ -73,7 +74,7 @@ vim.api.nvim_set_keymap('n', 'gD', '<cmd>lua vim.lsp.buf.implementation()<CR>', 
 vim.api.nvim_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true });
 vim.api.nvim_set_keymap('n', 'gY', '<cmd>lua vim.lsp.buf.type_definition()<CR>', {noremap = true, silent = true });
 vim.api.nvim_set_keymap('n', 'gn', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', {noremap = true, silent = true });
-vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua require\'telescope.builtin\'.lsp_references{}<CR>', {noremap = true, silent = true });
+vim.api.nvim_set_keymap('n', 'gr', '<cmd>lua require\'telescope.builtin\'.lsp_references()<CR>', {noremap = true, silent = true });
 
 -- autofix commands
 vim.api.nvim_set_keymap('n', 'qf', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true });

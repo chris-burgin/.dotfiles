@@ -10,7 +10,6 @@ window:
 font:
   # The size to use.
   size: 11
-  # The normal (roman) font face to use.
   normal:
     family: Fira Code
     style: Regular
