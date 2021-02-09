@@ -44,12 +44,6 @@ set signcolumn=yes
 " terminal.
 tnoremap <Esc> <C-\><C-n>
 
-" Folding
-set foldmethod=syntax   
-set foldnestmax=10
-set nofoldenable
-set foldlevel=2
-
 " Searching
 set ignorecase
 set smartcase
@@ -59,6 +53,10 @@ set cursorline
 
 " Map Q to q to deal with my constant fat fingering.
 command Q q
+
+" fold
+set foldmethod=indent
+set foldlevel=99
 
 " fix color scheme problem
 let g:dracula_colorterm = 0

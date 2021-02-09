@@ -66,7 +66,8 @@ export B5THROTTLER_ENABLED='false'
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 
-alias sb5="make run-server & make run-frontend-proxy-server"
+alias b5rs="make run-server"
+alias b5hr="make run-frontend-proxy-server"
 
 # core
 export coredir="/Users/chrisburgin/Development/core"

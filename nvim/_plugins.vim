@@ -26,6 +26,8 @@ Plug 'nvim-lua/popup.nvim'
 Plug 'cohama/lexima.vim'
 
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+Plug 'tpope/vim-dadbod'
 call plug#end()
 
 " theme
@@ -38,10 +40,9 @@ let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 silent! call airline#extensions#whitespace#disable()
 
-" prettier
-autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
-
 " lsp completion
+"
+" For gopls you will need to install `golang-x-tools-gopls` if your on Fedora.
 lua require'lsp_setup'
 
 " golang sort imports
@@ -58,3 +59,11 @@ nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files(require('telescope.
 
 " treesitter (theme highlighting and more)
 lua require'treesitter_setup'
+
+" prettier
+autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
+
+"dadbod
+let g:b5 = 'mysql://root:@127.0.0.1/b5'
+command -nargs=1 OPDB DB g:b5 <args>
+
