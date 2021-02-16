@@ -1,3 +1,6 @@
+" custom leader key
+let mapleader = " "
+
 " netrw setup.
 let g:netrw_liststyle = 0
 let g:netrw_sizestyle= "H" " show human readable file sizes
@@ -59,7 +62,7 @@ set foldmethod=indent
 set foldlevel=99
 
 " fix color scheme problem
-let g:dracula_colorterm = 0
+" let g:dracula_colorterm = 0
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -69,11 +72,14 @@ Plug 'tpope/vim-surround'
 
 Plug 'christoomey/vim-tmux-navigator'
 
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'mhinz/vim-signify'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+
+Plug 'mhinz/vim-signify' " git gutter
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -86,17 +92,17 @@ Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 
-Plug 'cohama/lexima.vim'
+Plug 'cohama/lexima.vim' " auto close parens
 
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
-Plug 'tpope/vim-dadbod'
+Plug 'tpope/vim-dadbod' " database access
 call plug#end()
 
 " theme
 set t_Co=256
-colorscheme dracula
-let g:airline_theme='dracula'
+set background=light
+colorscheme PaperColor
+let g:airline_theme='papercolor'
 
 " airline
 let g:webdevicons_enable_airline_statusline = 1
@@ -118,7 +124,10 @@ inoremap <silent><expr> <CR>      compe#confirm(lexima#expand('<LT>CR>', 'i'))
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
 " telescope
-nnoremap <C-p> <cmd>lua require'telescope.builtin'.git_files(require('telescope.themes').get_dropdown({previewer = false}))<CR>
+nnoremap <leader>ff <cmd>Telescope git_files<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fc <cmd>Telescope git_commits<cr>
+nnoremap <leader>fm <cmd>Telescope marks<cr>
 
 " treesitter (theme highlighting and more)
 lua require'treesitter_setup'
@@ -126,7 +135,7 @@ lua require'treesitter_setup'
 " prettier
 autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
 
-"dadbod
+" dadbod
 let g:b5 = 'mysql://root:@127.0.0.1/b5'
 command -nargs=1 OPDB DB g:b5 <args>
 

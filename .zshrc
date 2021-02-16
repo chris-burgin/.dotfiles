@@ -1,7 +1,6 @@
 # zsh
 ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="robbyrussell"
-# ZSH_THEME="dracula"
 plugins=(git)
 export ZSH="/home/chrisburgin/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
@@ -26,9 +25,6 @@ export GOBIN=$GOPATH/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
-# git: Custom git commands not added under the zsh git plugin.
- alias gpl="git pull"
-
 # docker
 alias dc="sudo docker-compose"
 alias dcu="sudo docker-compose up -d"
@@ -43,12 +39,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # ag: Super fast searching.
 alias ag='ag --path-to-ignore ~/.ignore'
 
-# tmux: Terminal window manager.
-alias tmuxa="tmux a -t"
-alias tpair='sudo tmux -S /tmp/pair new-session -d -s pair && sudo chmod 777 /tmp/pair'
-alias tpairattach='tmux -S /tmp/pair attach -t pair'
-alias tpairclose='tmux -S /tmp/pair kill-session -a'
-
 # bat: Used by nvim for file preview. Handled highlighting.
 export BAT_THEME="base16"
 
@@ -58,7 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # B5
-export B5_ENABLE_HOT_RELOAD="false"
+export B5_ENABLE_HOT_RELOAD="true"
 export B5_PROXY_BASE_URL="b5local.com:4000"
 
 export B5THROTTLER_ENABLED='false'
@@ -66,18 +56,8 @@ export B5THROTTLER_ENABLED='false'
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 
-alias b5rs="make run-server"
-alias b5hr="make run-frontend-proxy-server"
-
-# core
-export coredir="/Users/chrisburgin/Development/core"
-alias cdcore="cd $coredir"
+alias mrs="make run-server"
+alias mhr="make run-frontend-proxy-server"
 
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
-
-# prayer app
-export db_username="root"
-export db_password=""
-export db_hostname="127.0.0.1"
-alias cdp="cd ~/go/src/github.com/chris-burgin/prayer_api"
