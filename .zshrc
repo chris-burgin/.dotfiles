@@ -48,7 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # B5
-export B5_ENABLE_HOT_RELOAD="true"
+export B5_ENABLE_HOT_RELOAD="false"
 export B5_PROXY_BASE_URL="b5local.com:4000"
 
 export B5THROTTLER_ENABLED='false'
@@ -58,6 +58,7 @@ alias cdb5="cd $b5dir"
 
 alias mrs="make run-server"
 alias mhr="make run-frontend-proxy-server"
+alias mtui="make client/web-ui/test"
 
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"

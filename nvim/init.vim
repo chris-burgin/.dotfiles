@@ -58,11 +58,8 @@ set cursorline
 command Q q
 
 " fold
-set foldmethod=indent
+set foldmethod=manual
 set foldlevel=99
-
-" fix color scheme problem
-" let g:dracula_colorterm = 0
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -72,7 +69,6 @@ Plug 'tpope/vim-surround'
 
 Plug 'christoomey/vim-tmux-navigator'
 
-" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
