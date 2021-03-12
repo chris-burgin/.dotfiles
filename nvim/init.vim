@@ -65,7 +65,7 @@ command Q q
 set foldmethod=manual
 set foldlevel=99
 
-" Test focus commands
+" Test focus command
 command! RATF %s/\(it\|describe\|test\)\zs\.only\ze//g
 command! RTF exe "normal! ?\\(it.only(\\|describe.only(\\|test.only(\\)\<CR>f.dt(\<Esc>\<C-o>"
 command! ATF exe "normal! ?\\(it(\\|describe(\\|test(\\)\<CR>f(cl.only(\<Esc>\<C-o>"
