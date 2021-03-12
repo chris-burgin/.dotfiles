@@ -7,6 +7,11 @@ source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
+
+# git
+alias gca="git commit --amend"
+alias gcan="git commit --amend --no-edit"
+
 # path
 export PATH=$HOME/local/nvim/bin:$PATH
 export DOCKER_HOST=unix:///run/user/1000/docker.sock

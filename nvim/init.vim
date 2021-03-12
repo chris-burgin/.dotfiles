@@ -18,6 +18,15 @@ set nowrap
 set number relativenumber
 autocmd TermOpen * setlocal nonumber norelativenumber
 
+" Don't abandom buffers when hidden.
+set hidden 
+
+" Time to write swap, speeds up many plugins.
+set updatetime=300
+
+" Always show the sign column to keep consistent spacing.
+set signcolumn=yes
+
 " Real time search and replace.
 set inccommand=split
 
@@ -34,20 +43,15 @@ noremap <Down> :resize -3<CR>
 " Don't resize for splits when one is closed
 set noequalalways
 
-" Don't abandom buffers when hidden.
-set hidden 
-
-" Time to write swap, speeds up many plugins.
-set updatetime=300
-
-" Always show the sign column to keep consistent spacing.
-set signcolumn=yes
+" Location list maps
+noremap <Leader>n :cn<CR>
+noremap <Leader>p :cp<CR>
 
 " Use esc to leave insert mode and go to normal mode while using the built in
 " terminal.
 tnoremap <Esc> <C-\><C-n>
 
-" Searching
+" Improve searching
 set ignorecase
 set smartcase
 
@@ -60,6 +64,9 @@ command Q q
 " fold
 set foldmethod=manual
 set foldlevel=99
+
+" remove only focus
+command! RTF %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -134,4 +141,3 @@ autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsy
 " dadbod
 let g:b5 = 'mysql://root:@127.0.0.1/b5'
 command -nargs=1 OPDB DB g:b5 <args>
-
