@@ -65,7 +65,7 @@ command Q q
 set foldmethod=manual
 set foldlevel=99
 
-" remove only focus
+" Remove test focus
 command! RTF %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
