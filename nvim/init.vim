@@ -68,17 +68,13 @@ set foldmethod=manual
 set foldlevel=99
 
 " Test focus commands
-command! RATF %s/\(it\|describe\|test\)\zs\.only\ze//g
-command! RTF exe "normal! ?\\(it.only(\\|describe.only(\\|test.only(\\)\<CR>f.dt(\<Esc>"
-command! ATF exe "normal! ?\\(it(\\|describe(\\|test(\\)\<CR>f(cl.only(\<Esc>"
+command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-
-" Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
@@ -98,10 +94,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
-
-Plug 'cohama/lexima.vim' " auto close parens
-
-Plug 'tpope/vim-dadbod' " database access
 call plug#end()
 
 " theme
@@ -140,7 +132,3 @@ lua require'treesitter_setup'
 
 " prettier
 autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
-
-" dadbod
-let g:b5 = 'mysql://root:@127.0.0.1/b5'
-command -nargs=1 OPDB DB g:b5 <args>
