@@ -43,9 +43,11 @@ noremap <Down> :resize -3<CR>
 " Don't resize for splits when one is closed
 set noequalalways
 
-" Location list maps
-noremap <Leader>n :cn<CR>
-noremap <Leader>p :cp<CR>
+" quick fix and location list navigation
+noremap <Leader>j :cn<CR>
+noremap <Leader>k :cp<CR>
+noremap <C-j> :lne<CR>
+noremap <C-k> :lp<CR>
 
 " Use esc to leave insert mode and go to normal mode while using the built in
 " terminal.
@@ -67,8 +69,8 @@ set foldlevel=99
 
 " Test focus commands
 command! RATF %s/\(it\|describe\|test\)\zs\.only\ze//g
-command! RTF exe "normal! ?\\(it.only(\\|describe.only(\\|test.only(\\)\<CR>f.dt(\<Esc>\<C-o>"
-command! ATF exe "normal! ?\\(it(\\|describe(\\|test(\\)\<CR>f(cl.only(\<Esc>\<C-o>"
+command! RTF exe "normal! ?\\(it.only(\\|describe.only(\\|test.only(\\)\<CR>f.dt(\<Esc>"
+command! ATF exe "normal! ?\\(it(\\|describe(\\|test(\\)\<CR>f(cl.only(\<Esc>"
 
 " Plugins
 call plug#begin('~/.vim/plugged')
@@ -76,7 +78,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 
-Plug 'christoomey/vim-tmux-navigator'
+" Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
@@ -98,7 +100,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 
 Plug 'cohama/lexima.vim' " auto close parens
-
 
 Plug 'tpope/vim-dadbod' " database access
 call plug#end()
