@@ -1,12 +1,6 @@
 " custom leader key
 let mapleader = " "
 
-" netrw setup.
-let g:netrw_liststyle = 0
-let g:netrw_sizestyle= "H" " show human readable file sizes
-let g:netrw_sort_options = "i" " ignore case when sorting
-let g:netrw_sort_sequence = '[\/]$,*,\.bak$,\.o$,\.h$,\.info$,\.swp$,\.obj$'
-
 " Basic tabs setup.
 set tabstop=2
 set shiftwidth=2
@@ -75,6 +69,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-fugitive'
 
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
@@ -94,6 +90,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
+
+Plug 'chris-burgin/query.nvim'
 call plug#end()
 
 " theme
@@ -105,6 +103,7 @@ let g:airline_theme='papercolor'
 " airline
 let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
+let g:airline#extensions#branch#enabled = 0
 silent! call airline#extensions#whitespace#disable()
 
 " lsp completion
@@ -118,17 +117,17 @@ autocmd BufWritePre *.go lua require'functions'goimports(1000)
 " autocomplete as you type
 lua require'complete'
 inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm(lexima#expand('<LT>CR>', 'i'))
+inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
-" telescope
-nnoremap <leader>ff <cmd>Telescope git_files<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fc <cmd>Telescope git_commits<cr>
-nnoremap <leader>fm <cmd>Telescope marks<cr>
+" fzf
+nnoremap <leader>ff <cmd>:GFiles<cr>
 
 " treesitter (theme highlighting and more)
 lua require'treesitter_setup'
 
 " prettier
 autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
+
+" query.nvim
+lua require'query'
