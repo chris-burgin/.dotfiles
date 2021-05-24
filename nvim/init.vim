@@ -104,6 +104,7 @@ let g:airline_theme='papercolor'
 let g:webdevicons_enable_airline_statusline = 1
 let g:airline#extensions#nvimlsp#enabled = 1
 let g:airline#extensions#branch#enabled = 0
+let g:airline#extensions#scrollbar#enabled = 0
 silent! call airline#extensions#whitespace#disable()
 
 " lsp completion
