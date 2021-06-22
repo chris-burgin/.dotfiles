@@ -56,6 +56,7 @@ export NVM_DIR="$HOME/.nvm"
 export B5BUGSNAG_ENABLED='false'
 export B5BUGSNAG_APIKEY=''
 export B5THROTTLER_ENABLED='false'
+export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
 
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"

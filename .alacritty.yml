@@ -1,3 +1,4 @@
+
 shell:
   program: /usr/bin/zsh
   args:
@@ -9,7 +10,7 @@ window:
 # Font configuration (changes require restart)
 font:
   # The size to use.
-  size: 11
+  size: 15
   normal:
     family: Fira Code
     style: Regular
