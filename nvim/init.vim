@@ -1,4 +1,4 @@
-" custom leader key test
+" custom leader key
 let mapleader = " "
 
 " Basic tabs setup.
