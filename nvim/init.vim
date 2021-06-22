@@ -76,7 +76,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'sbdchd/neoformat'
 
 Plug 'mhinz/vim-signify' " git gutter
 
@@ -92,6 +92,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'
 
 Plug 'chris-burgin/query.nvim'
+
+Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " theme
@@ -127,8 +129,10 @@ nnoremap <leader>ff <cmd>:GFiles<cr>
 " treesitter (theme highlighting and more)
 lua require'treesitter_setup'
 
-" prettier
-autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html PrettierAsync
+augroup fmt
+  autocmd!
+  autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
+augroup END
 
 " query.nvim
 lua require'query'
