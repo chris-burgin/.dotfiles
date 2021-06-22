@@ -87,13 +87,11 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-Plug 'nvim-lua/telescope.nvim'
+" Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-lua/popup.nvim'
+" Plug 'nvim-lua/popup.nvim'
 
 Plug 'chris-burgin/query.nvim'
-
-Plug 'vimwiki/vimwiki'
 call plug#end()
 
 " theme
@@ -129,6 +127,7 @@ nnoremap <leader>ff <cmd>:GFiles<cr>
 " treesitter (theme highlighting and more)
 lua require'treesitter_setup'
 
+"neoformat
 augroup fmt
   autocmd!
   autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
