@@ -108,16 +108,14 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#scrollbar#enabled = 0
 silent! call airline#extensions#whitespace#disable()
 
+" treesitter
+lua require'config-treesitter'
+
 " lsp completion
-"
-" For gopls you will need to install `golang-x-tools-gopls` if your on Fedora.
-lua require'lsp_setup'
+lua require'config-lsp'
 
-" golang sort imports
-autocmd BufWritePre *.go lua require'functions'goimports(1000)
-
-" autocomplete as you type
-lua require'complete'
+" compe
+lua require'config-compe'
 inoremap <silent><expr> <C-Space> compe#complete()
 inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
@@ -125,14 +123,11 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 " fzf
 nnoremap <leader>ff <cmd>:GFiles<cr>
 
-" treesitter (theme highlighting and more)
-lua require'treesitter_setup'
-
-"neoformat
+" neoformat
 augroup fmt
   autocmd!
   autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
 augroup END
 
 " query.nvim
-lua require'query'
+lua require'config-query'
