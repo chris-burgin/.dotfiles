@@ -78,7 +78,7 @@ Plug 'vim-airline/vim-airline-themes'
 
 Plug 'sbdchd/neoformat'
 
-Plug 'mhinz/vim-signify' " git gutter
+Plug 'mhinz/vim-signify'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -86,12 +86,11 @@ Plug 'junegunn/fzf.vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'onsails/lspkind-nvim'
 
 Plug 'nvim-lua/plenary.nvim'
-
 Plug 'chris-burgin/query.nvim'
 
-Plug 'onsails/lspkind-nvim'
 
 call plug#end()
 
