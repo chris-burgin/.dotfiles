@@ -87,15 +87,16 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-compe'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-" Plug 'nvim-lua/telescope.nvim'
 Plug 'nvim-lua/plenary.nvim'
-" Plug 'nvim-lua/popup.nvim'
 
 Plug 'chris-burgin/query.nvim'
+
+Plug 'onsails/lspkind-nvim'
+
 call plug#end()
 
 " theme
-set t_Co=256
+" set t_Co=256
 set background=light
 colorscheme PaperColor
 let g:airline_theme='papercolor'

@@ -11,6 +11,9 @@ require'compe'.setup {
   source_timeout = 200;
   incomplete_delay = 400;
   allow_prefix_unmatch = false;
+	max_abbr_width = 100;
+  max_kind_width = 100;
+  max_menu_width = 100;
 
   source = {
     path = true;
@@ -23,5 +26,6 @@ require'compe'.setup {
     tags = true;
     snippets_nvim = true;
   };
+
 }
 
