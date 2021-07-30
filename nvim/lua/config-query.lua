@@ -8,10 +8,5 @@ require('query_nvim').setup({
         host = "127.0.0.1",
         database = "b5",
     }),
-    b51 = connectors.mysql({
-        user = "root",
-        host = "127.0.0.1",
-        database = "b5",
-    }),
   },
 })
