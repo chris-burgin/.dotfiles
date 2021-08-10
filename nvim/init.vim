@@ -90,8 +90,6 @@ Plug 'onsails/lspkind-nvim'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'chris-burgin/query.nvim'
-
-
 call plug#end()
 
 " theme

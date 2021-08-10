@@ -7,5 +7,3 @@ require'lsp/typescript'
 require'lsp/diagnostics'
 require'lsp/icons'
 require'lsp/mappings'
-
-
