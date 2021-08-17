@@ -1,5 +1,12 @@
 require('lspconfig').diagnosticls.setup{
-	filetypes = { "javascript", "javascript.jsx", "typescript", "typescriptreact" },
+	filetypes = { 
+		"javascript", 
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"scss",
+		"css", 
+	},
 	init_options = {
 		filetypes = {
 			javascript = "eslint",
@@ -8,6 +15,8 @@ require('lspconfig').diagnosticls.setup{
 			typescriptreact = "eslint",
 			typescript = "eslint",
 			typescriptreact = "eslint",
+			scss = "stylelint",
+      css = "stylelint",
 		},
 		formatFiletypes = {
       typescript = 'prettier',
@@ -38,7 +47,7 @@ require('lspconfig').diagnosticls.setup{
 					column = "column",
 					endLine = "endLine",
 					endColumn = "endColumn",
-					message = "${message} [${ruleId}]",
+					message = "[eslint - ${ruleId}] ${message} ",
 					security = "severity",
 				},
 				securities = {
@@ -46,6 +55,24 @@ require('lspconfig').diagnosticls.setup{
 					[1] = "warning",
 				},
 			},
+			stylelint = {
+        command = './node_modules/.bin/stylelint',
+        rootPatterns = { '.stylelintrc.yml' },
+        debounce = 100,
+        args = { '--formatter', 'json', '--stdin-filename', '%filepath' },
+        sourceName = 'stylelint',
+        parseJson = {
+          errorsRoot = '[0].warnings',
+          line = 'line',
+          column = 'column',
+          message = '[stylelint] ${text}',
+          security = 'severity',
+        },
+        securities = {
+          error = 'error',
+          warning = 'warning',
+        },
+      },
 		},
 		formatters = {
       prettier = {
