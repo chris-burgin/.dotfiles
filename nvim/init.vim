@@ -76,7 +76,7 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'sbdchd/neoformat'
+" Plug 'sbdchd/neoformat'
 
 Plug 'mhinz/vim-signify'
 
@@ -93,7 +93,7 @@ Plug 'chris-burgin/query.nvim'
 call plug#end()
 
 " theme
-" set t_Co=256
+
 set background=light
 colorscheme PaperColor
 let g:airline_theme='papercolor'
@@ -121,10 +121,10 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 nnoremap <leader>ff <cmd>:GFiles<cr>
 
 " neoformat
-augroup fmt
-  autocmd!
-  autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
-augroup END
+" augroup fmt
+"   autocmd!
+"   autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
+" augroup END
 
 " query.nvim
 lua require'config-query'
