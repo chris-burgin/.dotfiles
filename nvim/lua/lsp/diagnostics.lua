@@ -30,7 +30,7 @@ require('lspconfig').diagnosticls.setup{
 			eslint = {
 				sourceName = "eslint",
 				command = "eslint_d",
-				rootPatterns = { ".git" },
+				rootPatterns = { ".eslintrc.yml" },
 				debounce = 100,
 				args = {
 					"--cache",
@@ -47,7 +47,7 @@ require('lspconfig').diagnosticls.setup{
 					column = "column",
 					endLine = "endLine",
 					endColumn = "endColumn",
-					message = "[eslint - ${ruleId}] ${message} ",
+					message = "[eslint] ${message} (${ruleId}) ",
 					security = "severity",
 				},
 				securities = {
