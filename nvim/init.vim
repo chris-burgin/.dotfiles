@@ -76,8 +76,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" Plug 'sbdchd/neoformat'
-
 Plug 'mhinz/vim-signify'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -119,12 +117,6 @@ inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 
 " fzf
 nnoremap <leader>ff <cmd>:GFiles<cr>
-
-" neoformat
-" augroup fmt
-"   autocmd!
-"   autocmd BufWritePre *.js,*.ts,*.tsx,*.scss,*.json,*.md,*.yaml,*.html undojoin | Neoformat prettier
-" augroup END
 
 " query.nvim
 lua require'config-query'
