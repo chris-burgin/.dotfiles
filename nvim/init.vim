@@ -73,8 +73,9 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-fugitive'
 
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'hoob3rt/lualine.nvim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 Plug 'mhinz/vim-signify'
 
@@ -96,12 +97,15 @@ set background=light
 colorscheme PaperColor
 let g:airline_theme='papercolor'
 
+"lualine
+lua require'config-lualine'
+
 " airline
-let g:webdevicons_enable_airline_statusline = 1
-let g:airline#extensions#nvimlsp#enabled = 1
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#scrollbar#enabled = 0
-silent! call airline#extensions#whitespace#disable()
+" let g:webdevicons_enable_airline_statusline = 1
+" let g:airline#extensions#nvimlsp#enabled = 1
+" let g:airline#extensions#branch#enabled = 0
+" let g:airline#extensions#scrollbar#enabled = 0
+" silent! call airline#extensions#whitespace#disable()
 
 " treesitter
 lua require'config-treesitter'
