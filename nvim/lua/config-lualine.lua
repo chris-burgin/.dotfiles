@@ -6,14 +6,18 @@ custom_papercolor_light.inactive.b.bg = '#e4e4e4'
 custom_papercolor_light.inactive.c.bg = '#e4e4e4'
 
 require('lualine').setup({
-	options = {theme = custom_papercolor_light},
+	options = {
+		theme = custom_papercolor_light,
+		section_separators = '', 
+		component_separators = '',
+	},
 	sections = {
     lualine_a = {'mode'},
-    lualine_b = {{'filename', path=1}},
+    lualine_b = {{'filename', path=1}, },
     lualine_c = {},
     lualine_x = {},
     lualine_y = {'branch'},
-    lualine_z = {'location'}
+    lualine_z = {{'diagnostics', sources={'nvim_lsp'}}, 'location'}
   },
 	inactive_sections = {
     lualine_a = {'mode'},
