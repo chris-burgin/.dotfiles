@@ -24,18 +24,22 @@ set signcolumn=yes
 " Real time search and replace.
 set inccommand=split
 
+" Improve searching
+set ignorecase
+set smartcase
+
 " Split below and right.
 set splitbelow
 set splitright
+
+" Don't resize for splits when one is closed
+set noequalalways
 
 " Map arrow keys to resize splits.
 noremap <Left> :vertical resize +3<CR>
 noremap <Right> :vertical resize -3<CR>
 noremap <Up> :resize +3<CR>
 noremap <Down> :resize -3<CR>
-
-" Don't resize for splits when one is closed
-set noequalalways
 
 " quick fix and location list navigation
 noremap <Leader>j :cn<CR>
@@ -47,19 +51,11 @@ noremap <C-k> :lp<CR>
 " terminal.
 tnoremap <Esc> <C-\><C-n>
 
-" Improve searching
-set ignorecase
-set smartcase
-
 " Highlight the current line the cursor is on.
 set cursorline
 
 " Map Q to q to deal with my constant fat fingering.
 command Q q
-
-" fold
-set foldmethod=manual
-set foldlevel=99
 
 " Test focus commands
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
