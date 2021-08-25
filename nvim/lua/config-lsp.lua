@@ -1,9 +1,11 @@
--- languages
-require'lsp/golang'
-require'lsp/css'
-require'lsp/typescript'
+return function()
+	-- languages
+	require'lsp/golang'
+	require'lsp/css'
+	require'lsp/typescript'
 
--- other
-require'lsp/diagnostics'
-require'lsp/icons'
-require'lsp/mappings'
+	-- other
+	require'lsp/diagnostics'
+	require'lsp/icons'
+	require'lsp/mappings'
+end

@@ -62,29 +62,3 @@ command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
 lua require'config-plugins'
-
-" theme
-set background=light
-colorscheme PaperColor
-let g:airline_theme='papercolor'
-
-"lualine
-lua require'config-lualine'
-
-" treesitter
-lua require'config-treesitter'
-
-" lsp completion
-lua require'config-lsp'
-
-" compe
-lua require'config-compe'
-inoremap <silent><expr> <C-Space> compe#complete()
-inoremap <silent><expr> <CR>      compe#confirm('<CR>')
-inoremap <silent><expr> <C-e>     compe#close('<C-e>')
-
-" fzf
-nnoremap <leader>ff <cmd>:GFiles<cr>
-
-" query.nvim
-lua require'config-query'
