@@ -61,29 +61,7 @@ command Q q
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
-call plug#begin('~/.vim/plugged')
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-fugitive'
-
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'hoob3rt/lualine.nvim'
-
-Plug 'mhinz/vim-signify'
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'onsails/lspkind-nvim'
-
-Plug 'nvim-lua/plenary.nvim'
-Plug 'chris-burgin/query.nvim'
-call plug#end()
+lua require'config-plugins'
 
 " theme
 set background=light
