@@ -73,6 +73,22 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/.fzf"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
+  ["compe-tmux"] = {
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/compe-tmux"
+  },
   ["fzf.vim"] = {
     config = { "\27LJ\2\n\\\0\0\6\0\6\0\t6\0\0\0009\0\1\0009\0\2\0'\2\3\0'\3\4\0'\4\5\0004\5\0\0B\0\5\1K\0\1\0\16:GFiles<cr>\15<leader>ff\6n\20nvim_set_keymap\bapi\bvim\0" },
     loaded = true,
@@ -87,10 +103,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
-  ["nvim-compe"] = {
-    config = { "\27LJ\2\n„\5\0\0\6\0\22\0%6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\1\t\0=\1\b\0006\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\r\0'\4\14\0005\5\15\0B\0\5\0016\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\16\0'\4\17\0005\5\18\0B\0\5\0016\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\19\0'\4\20\0005\5\21\0B\0\5\1K\0\1\0\1\0\2\texpr\2\vsilent\2\26compe#confirm('<CR>')\t<CR>\1\0\2\texpr\2\vsilent\2\25compe#close('<C-e>')\n<C-e>\1\0\2\texpr\2\vsilent\2\21compe#complete()\14<C-Space>\6i\20nvim_set_keymap\bapi\26menu,menuone,noselect\16completeopt\6o\bvim\vsource\1\0\t\nvsnip\2\ttags\2\tcalc\2\nspell\2\vbuffer\2\rnvim_lsp\2\tpath\2\18snippets_nvim\2\rnvim_lua\2\1\0\f\18throttle_time\3P\14preselect\venable\15min_length\3\1\17autocomplete\2\fenabled\2\19max_abbr_width\3d\25allow_prefix_unmatch\1\21incomplete_delay\3\3\19max_kind_width\3d\19max_menu_width\3d\ndebug\1\19source_timeout\3È\1\nsetup\ncompe\frequire\0" },
+  ["nvim-cmp"] = {
+    config = { "\27LJ\2\n;\0\1\4\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvimÜ\1\0\2\5\0\n\0\0176\2\1\0'\4\2\0B\2\2\0029\2\3\0029\2\4\0029\3\0\0018\2\3\2'\3\5\0009\4\0\1&\2\4\2=\2\0\0015\2\a\0009\3\b\0009\3\t\0038\2\3\2=\2\6\1L\1\2\0\tname\vsource\1\0\5\vbuffer\r[Buffer]\18latex_symbols\f[Latex]\rnvim_lsp\n[LSP]\rnvim_lua\n[Lua]\fluasnip\14[LuaSnip]\tmenu\6 \fdefault\fpresets\flspkind\frequire\tkind.\0\0\2\0\3\0\0046\0\0\0009\0\1\0009\0\2\0D\0\1\0\19nvim_list_bufs\bapi\bvim¸\3\1\0\t\0\30\0/6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0015\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0045\5\f\0009\6\t\0019\6\n\0065\b\v\0B\6\2\2=\6\r\5=\5\t\0044\5\4\0005\6\14\0>\6\1\0055\6\15\0>\6\2\0055\6\16\0>\6\3\5=\5\17\0045\5\19\0003\6\18\0=\6\20\5=\5\21\4B\2\2\0016\2\22\0009\2\23\0029\2\24\0029\2\25\2B\2\1\0026\3\0\0'\5\26\0B\3\2\0029\3\27\3\18\5\2\0B\3\2\2\18\2\3\0003\3\28\0007\3\29\0K\0\1\0\15get_bufnrs\0\24update_capabilities\17cmp_nvim_lsp\29make_client_capabilities\rprotocol\blsp\bvim\15formatting\vformat\1\0\0\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\fmapping\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\flspkind\frequire\0" },
     loaded = true,
-    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     config = { "\27LJ\2\n¤\1\0\0\3\0\a\0\0196\0\0\0'\2\1\0B\0\2\0016\0\0\0'\2\2\0B\0\2\0016\0\0\0'\2\3\0B\0\2\0016\0\0\0'\2\4\0B\0\2\0016\0\0\0'\2\5\0B\0\2\0016\0\0\0'\2\6\0B\0\2\1K\0\1\0\17lsp/mappings\14lsp/icons\20lsp/diagnostics\19lsp/typescript\flsp/css\15lsp/golang\frequire\0" },
@@ -116,7 +132,7 @@ _G.packer_plugins = {
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/plenary.nvim"
   },
   ["query.nvim"] = {
-    config = { "\27LJ\2\n¼\1\0\0\t\0\n\0\0196\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0026\2\0\0'\4\1\0B\2\2\0029\2\3\0025\4\b\0005\5\6\0009\6\4\0015\b\5\0B\6\2\2=\6\a\5=\5\t\4B\2\2\1K\0\1\0\adb\1\0\0\ab5\1\0\0\1\0\3\thost\014127.0.0.1\tuser\troot\rdatabase\ab5\nmysql\nsetup\26query_nvim/connectors\15query_nvim\frequire\0" },
+    config = { "\27LJ\2\n¼\1\0\0\t\0\n\0\0196\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0026\2\0\0'\4\1\0B\2\2\0029\2\3\0025\4\b\0005\5\6\0009\6\4\0015\b\5\0B\6\2\2=\6\a\5=\5\t\4B\2\2\1K\0\1\0\adb\1\0\0\ab5\1\0\0\1\0\3\tuser\troot\rdatabase\ab5\thost\014127.0.0.1\nmysql\nsetup\26query_nvim/connectors\15query_nvim\frequire\0" },
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/query.nvim"
   },
@@ -143,18 +159,14 @@ _G.packer_plugins = {
   ["vim-vinegar"] = {
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/vim-vinegar"
+  },
+  ["vim-vsnip"] = {
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/vim-vsnip"
   }
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: query.nvim
-time([[Config for query.nvim]], true)
-try_loadstring("\27LJ\2\n¼\1\0\0\t\0\n\0\0196\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0026\2\0\0'\4\1\0B\2\2\0029\2\3\0025\4\b\0005\5\6\0009\6\4\0015\b\5\0B\6\2\2=\6\a\5=\5\t\4B\2\2\1K\0\1\0\adb\1\0\0\ab5\1\0\0\1\0\3\thost\014127.0.0.1\tuser\troot\rdatabase\ab5\nmysql\nsetup\26query_nvim/connectors\15query_nvim\frequire\0", "config", "query.nvim")
-time([[Config for query.nvim]], false)
--- Config for: nvim-compe
-time([[Config for nvim-compe]], true)
-try_loadstring("\27LJ\2\n„\5\0\0\6\0\22\0%6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\1\t\0=\1\b\0006\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\r\0'\4\14\0005\5\15\0B\0\5\0016\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\16\0'\4\17\0005\5\18\0B\0\5\0016\0\6\0009\0\n\0009\0\v\0'\2\f\0'\3\19\0'\4\20\0005\5\21\0B\0\5\1K\0\1\0\1\0\2\texpr\2\vsilent\2\26compe#confirm('<CR>')\t<CR>\1\0\2\texpr\2\vsilent\2\25compe#close('<C-e>')\n<C-e>\1\0\2\texpr\2\vsilent\2\21compe#complete()\14<C-Space>\6i\20nvim_set_keymap\bapi\26menu,menuone,noselect\16completeopt\6o\bvim\vsource\1\0\t\nvsnip\2\ttags\2\tcalc\2\nspell\2\vbuffer\2\rnvim_lsp\2\tpath\2\18snippets_nvim\2\rnvim_lua\2\1\0\f\18throttle_time\3P\14preselect\venable\15min_length\3\1\17autocomplete\2\fenabled\2\19max_abbr_width\3d\25allow_prefix_unmatch\1\21incomplete_delay\3\3\19max_kind_width\3d\19max_menu_width\3d\ndebug\1\19source_timeout\3È\1\nsetup\ncompe\frequire\0", "config", "nvim-compe")
-time([[Config for nvim-compe]], false)
 -- Config for: papercolor-theme
 time([[Config for papercolor-theme]], true)
 try_loadstring("\27LJ\2\n_\0\0\3\0\6\0\t6\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\4\0'\2\5\0B\0\2\1K\0\1\0\27colorscheme PaperColor\bcmd\nlight\15background\bopt\bvim\0", "config", "papercolor-theme")
@@ -175,6 +187,14 @@ time([[Config for lualine.nvim]], false)
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\n˜\2\0\0\5\0\f\0\0156\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0025\3\6\0005\4\a\0=\4\b\0035\4\t\0=\4\n\3=\3\v\2B\0\2\1K\0\1\0\26incremental_selection\vindent\1\0\1\venable\2\fkeymaps\1\0\3\21node_decremental\bgsd\19init_selection\bgss\21node_incremental\bgsi\1\0\1\venable\2\14highlight\1\0\1\venable\2\1\0\1\21ensure_installed\15maintained\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
 time([[Config for nvim-treesitter]], false)
+-- Config for: query.nvim
+time([[Config for query.nvim]], true)
+try_loadstring("\27LJ\2\n¼\1\0\0\t\0\n\0\0196\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0026\2\0\0'\4\1\0B\2\2\0029\2\3\0025\4\b\0005\5\6\0009\6\4\0015\b\5\0B\6\2\2=\6\a\5=\5\t\4B\2\2\1K\0\1\0\adb\1\0\0\ab5\1\0\0\1\0\3\tuser\troot\rdatabase\ab5\thost\014127.0.0.1\nmysql\nsetup\26query_nvim/connectors\15query_nvim\frequire\0", "config", "query.nvim")
+time([[Config for query.nvim]], false)
+-- Config for: nvim-cmp
+time([[Config for nvim-cmp]], true)
+try_loadstring("\27LJ\2\n;\0\1\4\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\3\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvimÜ\1\0\2\5\0\n\0\0176\2\1\0'\4\2\0B\2\2\0029\2\3\0029\2\4\0029\3\0\0018\2\3\2'\3\5\0009\4\0\1&\2\4\2=\2\0\0015\2\a\0009\3\b\0009\3\t\0038\2\3\2=\2\6\1L\1\2\0\tname\vsource\1\0\5\vbuffer\r[Buffer]\18latex_symbols\f[Latex]\rnvim_lsp\n[LSP]\rnvim_lua\n[Lua]\fluasnip\14[LuaSnip]\tmenu\6 \fdefault\fpresets\flspkind\frequire\tkind.\0\0\2\0\3\0\0046\0\0\0009\0\1\0009\0\2\0D\0\1\0\19nvim_list_bufs\bapi\bvim¸\3\1\0\t\0\30\0/6\0\0\0'\2\1\0B\0\2\0026\1\0\0'\3\2\0B\1\2\0029\2\3\0015\4\a\0005\5\5\0003\6\4\0=\6\6\5=\5\b\0045\5\f\0009\6\t\0019\6\n\0065\b\v\0B\6\2\2=\6\r\5=\5\t\0044\5\4\0005\6\14\0>\6\1\0055\6\15\0>\6\2\0055\6\16\0>\6\3\5=\5\17\0045\5\19\0003\6\18\0=\6\20\5=\5\21\4B\2\2\0016\2\22\0009\2\23\0029\2\24\0029\2\25\2B\2\1\0026\3\0\0'\5\26\0B\3\2\0029\3\27\3\18\5\2\0B\3\2\2\18\2\3\0003\3\28\0007\3\29\0K\0\1\0\15get_bufnrs\0\24update_capabilities\17cmp_nvim_lsp\29make_client_capabilities\rprotocol\blsp\bvim\15formatting\vformat\1\0\0\0\fsources\1\0\1\tname\tpath\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\fmapping\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\flspkind\frequire\0", "config", "nvim-cmp")
+time([[Config for nvim-cmp]], false)
 if should_profile then save_profiles() end
 
 end)
