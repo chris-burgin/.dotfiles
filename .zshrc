@@ -65,6 +65,3 @@ alias mtui="make client/web-ui/test"
 
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
-
-# DATACENTER
-export DATACENTER_PW='ixT3fkWBPTYe4ZsEocDV'
