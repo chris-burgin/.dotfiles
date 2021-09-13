@@ -30,6 +30,10 @@ return require('packer').startup(function()
 
   use 'mhinz/vim-signify'
 
+	use {'kristijanhusak/orgmode.nvim', config = require('config-orgmode')}
+
+	use {'RRethy/vim-illuminate', config = require("config-illuminate")}
+
 	use { 'chris-burgin/query.nvim', requires = {{'nvim-lua/plenary.nvim'}}, config = require('config-query')}
 end)
 

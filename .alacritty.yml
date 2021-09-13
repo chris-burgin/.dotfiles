@@ -18,6 +18,8 @@ font:
     style: Bold
   italic:
     family: Fira Code Retina
+
+TERM: xterm-256color
     
 # Colors (PaperColor - Light)
 colors:
