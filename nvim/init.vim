@@ -54,6 +54,9 @@ tnoremap <Esc> <C-\><C-n>
 " Highlight the current line the cursor is on.
 set cursorline
 
+" terminal colors
+set termguicolors
+
 " Map Q to q to deal with my constant fat fingering.
 command Q q
 
@@ -61,4 +64,4 @@ command Q q
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
-lua require'config-plugins'
+lua require'config'

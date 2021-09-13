@@ -17,9 +17,6 @@ function is_go(ft)
 end
 
 function util.on_attach(client, bufnr)
-	-- Highlight word under cursor, see lua/config-illuminate.lua for more.
-	require 'illuminate'.on_attach(client)
-
 	local ft = vim.bo.filetype
 
   if is_go(ft) then
@@ -41,8 +38,10 @@ function util.on_attach(client, bufnr)
         autocmd BufWritePre * TSFormat
       augroup END
     ]])
-
   end
+
+	-- Highlight word under cursor, see lua/config-illuminate.lua for more.
+	require 'illuminate'.on_attach(client)
 end
 
 return util;
