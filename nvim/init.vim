@@ -60,5 +60,5 @@ command Q q
 " Test focus commands
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
-"black Plugins
+" Plugins
 lua require'config-plugins'
