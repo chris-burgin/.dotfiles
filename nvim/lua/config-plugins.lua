@@ -5,7 +5,8 @@ return require('packer').startup(function()
 	use 'tpope/vim-sensible'
 	use 'tpope/vim-surround'
 	use 'tpope/vim-vinegar'
-	use {'NLKNguyen/papercolor-theme', config = require('config-theme')}
+	use {'chris-burgin/papercolor-theme', config = require('config-theme')}
+	-- use {'projekt0n/github-nvim-theme', config = require('config-theme-github')}
 	use {'hoob3rt/lualine.nvim', config = require('config-lualine')}
 	use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = require('config-treesitter')}
 	use {'neovim/nvim-lspconfig', config = require('config-lsp')}

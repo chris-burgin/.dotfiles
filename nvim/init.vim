@@ -65,3 +65,6 @@ command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " Plugins
 lua require'config'
+
+" custom theme colors
+highlight LspDiagnosticsDefaultError guifg=#d70000
