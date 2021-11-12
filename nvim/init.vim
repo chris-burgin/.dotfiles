@@ -57,6 +57,10 @@ set cursorline
 " terminal colors
 set termguicolors
 
+" fold
+set foldmethod=indent
+set nofoldenable
+
 " Map Q to q to deal with my constant fat fingering.
 command Q q
 

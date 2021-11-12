@@ -13,7 +13,7 @@ alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
 
 # path
-export PATH=$HOME/local/nvim/bin:$PATH
+# export PATH=$HOME/local/nvim/bin:$PATH # add nvim to the path
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export MYSQL_ROOT_PASSWORD=""
 
@@ -31,6 +31,7 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
 # docker
+alias ds="sudo systemctl start docker"
 alias dc="sudo docker-compose"
 alias dcu="sudo docker-compose --profile linux up -d"
 alias dcd="sudo docker-compose down"
