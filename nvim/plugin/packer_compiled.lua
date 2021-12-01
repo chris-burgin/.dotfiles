@@ -192,12 +192,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/vim-vsnip",
     url = "https://github.com/hrsh7th/vim-vsnip"
-  },
-  ["which-key.nvim"] = {
-    config = { "\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0" },
-    loaded = true,
-    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/which-key.nvim",
-    url = "https://github.com/folke/which-key.nvim"
   }
 }
 
@@ -214,10 +208,10 @@ time([[Config for fzf.vim]], false)
 time([[Config for nvim-lspconfig]], true)
 try_loadstring("\27LJ\2\2¤\1\0\0\2\0\a\0\0196\0\0\0'\1\1\0B\0\2\0016\0\0\0'\1\2\0B\0\2\0016\0\0\0'\1\3\0B\0\2\0016\0\0\0'\1\4\0B\0\2\0016\0\0\0'\1\5\0B\0\2\0016\0\0\0'\1\6\0B\0\2\1K\0\1\0\17lsp/mappings\14lsp/icons\20lsp/diagnostics\19lsp/typescript\flsp/css\15lsp/golang\frequire\0", "config", "nvim-lspconfig")
 time([[Config for nvim-lspconfig]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\2;\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
+-- Config for: vim-illuminate
+time([[Config for vim-illuminate]], true)
+try_loadstring("\27LJ\2\2ÿ\3\0\0\5\0\16\0$6\0\0\0009\0\1\0)\1È\0=\1\2\0006\0\0\0009\0\3\0009\0\4\0'\1\5\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0'\1\6\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0'\1\a\0B\0\2\0016\0\0\0009\0\3\0009\0\b\0'\1\t\0'\2\n\0'\3\v\0005\4\f\0B\0\5\0016\0\0\0009\0\3\0009\0\b\0'\1\t\0'\2\r\0'\3\14\0005\4\15\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2L<cmd>lua require\"illuminate\".next_reference{reverse=true,wrap=true}<cr>\14<leader>p\1\0\1\fnoremap\2?<cmd>lua require\"illuminate\".next_reference{wrap=true}<cr>\14<leader>n\6n\20nvim_set_keymap. hi def link LspReferenceRead CursorLine / hi def link LspReferenceWrite CursorLine . hi def link LspReferenceText CursorLine \17nvim_command\bapi\21Illuminate_delay\6g\bvim\0", "config", "vim-illuminate")
+time([[Config for vim-illuminate]], false)
 -- Config for: nvim-cmp
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\2;\0\1\3\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvim•\4\1\0\b\0\30\0/6\0\0\0'\1\1\0B\0\2\0026\1\0\0'\2\2\0B\1\2\0029\2\3\0015\3\a\0005\4\5\0003\5\4\0=\5\6\4=\4\b\0035\4\f\0009\5\t\0019\5\n\0055\6\v\0B\5\2\2=\5\r\4=\4\t\0034\4\3\0005\5\14\0>\5\1\0045\5\15\0>\5\2\4=\4\16\0035\4\21\0009\5\17\0005\6\18\0005\a\19\0=\a\20\6B\5\2\2=\5\22\4=\4\23\3B\2\2\0016\2\24\0009\2\25\0029\2\26\0029\2\27\2B\2\1\0026\3\0\0'\4\28\0B\3\2\0029\3\29\3\18\4\2\0B\3\2\2\18\2\3\0K\0\1\0\24update_capabilities\17cmp_nvim_lsp\29make_client_capabilities\rprotocol\blsp\bvim\15formatting\vformat\1\0\0\tmenu\1\0\5\fluasnip\14[LuaSnip]\18latex_symbols\f[Latex]\rnvim_lua\n[Lua]\vbuffer\r[Buffer]\rnvim_lsp\n[LSP]\1\0\1\14with_text\2\15cmp_format\fsources\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\fmapping\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\flspkind\frequire\0", "config", "nvim-cmp")
@@ -230,10 +224,6 @@ time([[Config for background.nvim]], false)
 time([[Config for papercolor-theme]], true)
 try_loadstring("\27LJ\2\2:\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0\27colorscheme PaperColor\bcmd\bvim\0", "config", "papercolor-theme")
 time([[Config for papercolor-theme]], false)
--- Config for: vim-illuminate
-time([[Config for vim-illuminate]], true)
-try_loadstring("\27LJ\2\2ÿ\3\0\0\5\0\16\0$6\0\0\0009\0\1\0)\1È\0=\1\2\0006\0\0\0009\0\3\0009\0\4\0'\1\5\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0'\1\6\0B\0\2\0016\0\0\0009\0\3\0009\0\4\0'\1\a\0B\0\2\0016\0\0\0009\0\3\0009\0\b\0'\1\t\0'\2\n\0'\3\v\0005\4\f\0B\0\5\0016\0\0\0009\0\3\0009\0\b\0'\1\t\0'\2\r\0'\3\14\0005\4\15\0B\0\5\1K\0\1\0\1\0\1\fnoremap\2L<cmd>lua require\"illuminate\".next_reference{reverse=true,wrap=true}<cr>\14<leader>p\1\0\1\fnoremap\2?<cmd>lua require\"illuminate\".next_reference{wrap=true}<cr>\14<leader>n\6n\20nvim_set_keymap. hi def link LspReferenceRead CursorLine / hi def link LspReferenceWrite CursorLine . hi def link LspReferenceText CursorLine \17nvim_command\bapi\21Illuminate_delay\6g\bvim\0", "config", "vim-illuminate")
-time([[Config for vim-illuminate]], false)
 -- Config for: nvim-treesitter
 time([[Config for nvim-treesitter]], true)
 try_loadstring("\27LJ\2\2˜\2\0\0\4\0\f\0\0156\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0005\2\4\0=\2\5\0015\2\6\0005\3\a\0=\3\b\0025\3\t\0=\3\n\2=\2\v\1B\0\2\1K\0\1\0\26incremental_selection\vindent\1\0\1\venable\2\fkeymaps\1\0\3\21node_decremental\bgsd\21node_incremental\bgsi\19init_selection\bgss\1\0\1\venable\2\14highlight\1\0\1\venable\2\1\0\1\21ensure_installed\15maintained\nsetup\28nvim-treesitter.configs\frequire\0", "config", "nvim-treesitter")
