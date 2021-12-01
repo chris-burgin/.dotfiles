@@ -72,3 +72,7 @@ lua require'config'
 
 " custom theme colors
 highlight LspDiagnosticsDefaultError guifg=#d70000
+
+" nvim-cmp highlight
+highlight! CmpItemAbbrMatch guibg=NONE guifg=#d70087
+highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#d70087
