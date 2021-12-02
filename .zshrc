@@ -48,6 +48,9 @@ alias ag='ag --path-to-ignore ~/.ignore'
 # bat: Used by nvim for file preview. Handled highlighting.
 export BAT_THEME="base16"
 
+# lazygit:
+alias lg='lazygit'
+
 # NVM (node version manager): Allows quickly switching the node version.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

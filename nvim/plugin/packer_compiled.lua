@@ -96,6 +96,12 @@ _G.packer_plugins = {
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
   },
+  ["hop.nvim"] = {
+    config = { "\27LJ\2\2§\2\0\0\5\0\14\0\0316\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\b\0'\3\t\0004\4\0\0B\0\5\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\n\0'\3\v\0004\4\0\0B\0\5\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\f\0'\3\r\0004\4\0\0B\0\5\1K\0\1\0\24<cmd>HopPattern<cr>\15<Leader>hp\21<cmd>HopWord<cr>\15<Leader>hw\22<cmd>HopChar1<cr>\15<Leader>hc\6n\20nvim_set_keymap\bapi\bvim\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0" },
+    loaded = true,
+    path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/hop.nvim",
+    url = "https://github.com/phaazon/hop.nvim"
+  },
   ["lazygit.nvim"] = {
     loaded = true,
     path = "/home/chrisburgin/.local/share/nvim/site/pack/packer/start/lazygit.nvim",
@@ -216,6 +222,10 @@ time([[Config for vim-illuminate]], false)
 time([[Config for nvim-cmp]], true)
 try_loadstring("\27LJ\2\2;\0\1\3\0\4\0\0066\1\0\0009\1\1\0019\1\2\0019\2\3\0B\1\2\1K\0\1\0\tbody\20vsnip#anonymous\afn\bvim•\4\1\0\b\0\30\0/6\0\0\0'\1\1\0B\0\2\0026\1\0\0'\2\2\0B\1\2\0029\2\3\0015\3\a\0005\4\5\0003\5\4\0=\5\6\4=\4\b\0035\4\f\0009\5\t\0019\5\n\0055\6\v\0B\5\2\2=\5\r\4=\4\t\0034\4\3\0005\5\14\0>\5\1\0045\5\15\0>\5\2\4=\4\16\0035\4\21\0009\5\17\0005\6\18\0005\a\19\0=\a\20\6B\5\2\2=\5\22\4=\4\23\3B\2\2\0016\2\24\0009\2\25\0029\2\26\0029\2\27\2B\2\1\0026\3\0\0'\4\28\0B\3\2\0029\3\29\3\18\4\2\0B\3\2\2\18\2\3\0K\0\1\0\24update_capabilities\17cmp_nvim_lsp\29make_client_capabilities\rprotocol\blsp\bvim\15formatting\vformat\1\0\0\tmenu\1\0\5\fluasnip\14[LuaSnip]\18latex_symbols\f[Latex]\rnvim_lua\n[Lua]\vbuffer\r[Buffer]\rnvim_lsp\n[LSP]\1\0\1\14with_text\2\15cmp_format\fsources\1\0\1\tname\vbuffer\1\0\1\tname\rnvim_lsp\t<CR>\1\0\0\1\0\1\vselect\2\fconfirm\fmapping\fsnippet\1\0\0\vexpand\1\0\0\0\nsetup\bcmp\flspkind\frequire\0", "config", "nvim-cmp")
 time([[Config for nvim-cmp]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+try_loadstring("\27LJ\2\2§\2\0\0\5\0\14\0\0316\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\b\0'\3\t\0004\4\0\0B\0\5\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\n\0'\3\v\0004\4\0\0B\0\5\0016\0\4\0009\0\5\0009\0\6\0'\1\a\0'\2\f\0'\3\r\0004\4\0\0B\0\5\1K\0\1\0\24<cmd>HopPattern<cr>\15<Leader>hp\21<cmd>HopWord<cr>\15<Leader>hw\22<cmd>HopChar1<cr>\15<Leader>hc\6n\20nvim_set_keymap\bapi\bvim\1\0\1\tkeys\28etovxqpdygfblzhckisuran\nsetup\bhop\frequire\0", "config", "hop.nvim")
+time([[Config for hop.nvim]], false)
 -- Config for: background.nvim
 time([[Config for background.nvim]], true)
 try_loadstring("\27LJ\2\2=\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20background_nvim\frequire\0", "config", "background.nvim")

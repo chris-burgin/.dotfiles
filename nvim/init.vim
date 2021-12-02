@@ -47,10 +47,6 @@ noremap <Leader>k :cp<CR>
 noremap <C-j> :lne<CR>
 noremap <C-k> :lp<CR>
 
-" Use esc to leave insert mode and go to normal mode while using the built in
-" terminal.
-tnoremap <Esc> <C-\><C-n>
-
 " Highlight the current line the cursor is on.
 set cursorline
 
@@ -72,7 +68,3 @@ lua require'config'
 
 " custom theme colors
 highlight LspDiagnosticsDefaultError guifg=#d70000
-
-" nvim-cmp highlight
-highlight! CmpItemAbbrMatch guibg=NONE guifg=#d70087
-highlight! CmpItemAbbrMatchFuzzy guibg=NONE guifg=#d70087
