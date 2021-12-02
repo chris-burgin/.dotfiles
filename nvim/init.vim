@@ -63,6 +63,9 @@ command Q q
 " Test focus commands
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
+" ZSH working in vim
+set shell=zsh\ -i
+
 " Plugins
 lua require'config'
 
