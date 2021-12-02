@@ -9,7 +9,7 @@ return require("packer").startup(function()
 	use {"chris-burgin/papercolor-theme", config = require("config-theme")}
 	use {"hoob3rt/lualine.nvim", config = require("config-lualine")}
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require("config-treesitter")}
-	use {"neovim/nvim-lspconfig", config = require("config-lsp"), commit = "26648bf59ffeef4c4f4848764ce22d74f6235822"}
+	use {"neovim/nvim-lspconfig", config = require("config-lsp")}
 	use {"hrsh7th/nvim-cmp", requires = { "hrsh7th/vim-vsnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp" }, config = require("config-cmp")}	
 	use {"onsails/lspkind-nvim"}
 	use {"~/.fzf"}
