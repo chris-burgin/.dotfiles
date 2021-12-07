@@ -64,7 +64,7 @@ command Q q
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
 " ZSH working in vim
-set shell=zsh\ -i
+" set shell=zsh\ -i
 
 " Plugins
 lua require'config'

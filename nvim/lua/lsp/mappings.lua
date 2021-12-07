@@ -14,4 +14,5 @@ vim.api.nvim_set_keymap('n', 'gp', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>'
 vim.api.nvim_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true });
 vim.api.nvim_set_keymap('n', '<F2>', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true });
 
-
+-- insert mode commands
+vim.api.nvim_set_keymap('i', '<C-K>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', {noremap = true, silent = true });
