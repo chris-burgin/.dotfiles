@@ -65,6 +65,10 @@ export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 
+export knoxdir="~/development/knox"
+alias cdknox="cd $knoxdir"
+
+
 alias mtui="make client/web-ui/test"
 
 # backup: Backup script that syncs all of my important files
