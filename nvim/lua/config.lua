@@ -20,4 +20,5 @@ return require("packer").startup(function()
 	use {"chris-burgin/background.nvim", config = require("config-background")}
 	use {"phaazon/hop.nvim", config = require("config-hop")}
 	use {"junegunn/vim-easy-align"}
+	use {"editorconfig/editorconfig-vim"}
 end)
