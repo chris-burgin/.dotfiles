@@ -30,7 +30,7 @@ require('lspconfig').diagnosticls.setup{
 			eslint = {
 				sourceName = "eslint",
 				command = "eslint_d",
-				rootPatterns = { ".eslintrc.yml" },
+				rootPatterns = { ".eslintrc.yml", ".eslintrc.js" },
 				debounce = 100,
 				args = {
 					"--cache",
@@ -57,7 +57,7 @@ require('lspconfig').diagnosticls.setup{
 			},
 			stylelint = {
         command = './node_modules/.bin/stylelint',
-        rootPatterns = { '.stylelintrc.yml' },
+        rootPatterns = { '.stylelintrc.yml', '.stylelintrc.js' },
         debounce = 100,
         args = { '--formatter', 'json', '--stdin-filename', '%filepath' },
         sourceName = 'stylelint',
