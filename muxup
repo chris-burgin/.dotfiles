@@ -1,3 +1,6 @@
 #!/bin/bash
+cd ~/go/src/go.1password.io/b5/
+tmux new-session -d -s b5
 
-echo "CAT"
+cd ~/development/knox
+tmux new-session -d -s knox
