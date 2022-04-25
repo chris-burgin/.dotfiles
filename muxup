@@ -1,6 +1,9 @@
 #!/bin/bash
+
+# B5
 cd ~/go/src/go.1password.io/b5/
 tmux new-session -d -s b5
 
+# Knox
 cd ~/development/knox
 tmux new-session -d -s knox

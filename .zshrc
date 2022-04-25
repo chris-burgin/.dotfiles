@@ -68,11 +68,13 @@ alias cdb5="cd $b5dir"
 export knoxdir="~/development/knox"
 alias cdknox="cd $knoxdir"
 
-
 alias mtui="make client/web-ui/test"
 
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
+
+# tmux
+alias ta="tmux a -t"
 
 # functions
 gmb () {
