@@ -1,7 +1,7 @@
 # zsh
 ZSH_DISABLE_COMPFIX=true
 ZSH_THEME="robbyrussell"
-plugins=(git)
+plugins=(git npm)
 export ZSH="/home/chrisburgin/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
@@ -13,7 +13,7 @@ alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
 
 # path
-# export PATH=$HOME/local/nvim/bin:$PATH # add nvim to the path
+export PATH=$HOME/local/nvim/bin:$PATH # add nvim to the path
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export MYSQL_ROOT_PASSWORD=""
 

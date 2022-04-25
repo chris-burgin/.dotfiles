@@ -7,6 +7,7 @@ cp -rf ~/.config/kitty .
 cp -f ~/.tmux.conf .
 cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
+cp -f ~/.local/bin/muxup
 
 # check if there are changes
 if [[ -z $(git status -s) ]] 
