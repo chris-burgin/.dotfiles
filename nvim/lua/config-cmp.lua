@@ -1,6 +1,7 @@
 return function()
   local lspkind = require('lspkind')
   local cmp = require'cmp'
+	local cmp_types = require"cmp.types.cmp"
 
   cmp.setup({
     snippet = {
@@ -10,6 +11,8 @@ return function()
     },
     mapping = {
       ['<CR>'] = cmp.mapping.confirm({ select = true }),
+			['<C-n>'] = cmp.mapping.select_next_item({ behavior = cmp_types.SelectBehavior.Insert }), 
+			['<C-p>'] = cmp.mapping.select_prev_item({ behavior = cmp_types.SelectBehavior.Insert }),
     },
     sources = {
       { name = 'nvim_lsp' },
