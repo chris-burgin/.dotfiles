@@ -6,6 +6,7 @@ require('lspconfig').diagnosticls.setup{
 		"typescriptreact",
 		"scss",
 		"css", 
+		"json",
 	},
 	init_options = {
 		filetypes = {
@@ -25,6 +26,7 @@ require('lspconfig').diagnosticls.setup{
       javascriptreact = 'prettier',
       css = 'prettier',
       scss = 'prettier',
+      json = 'prettier',
     },
 		linters = {
 			eslint = {
