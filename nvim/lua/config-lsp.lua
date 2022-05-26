@@ -3,6 +3,7 @@ return function()
 	require'lsp/golang'
 	require'lsp/css'
 	require'lsp/typescript'
+	require'lsp/svelte'
 
 	-- other
 	require'lsp/diagnostics'
