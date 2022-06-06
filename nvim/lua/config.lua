@@ -10,6 +10,7 @@ return require("packer").startup(function()
 	use {"hoob3rt/lualine.nvim", config = require("config-lualine")}
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require("config-treesitter")}
 	use {"neovim/nvim-lspconfig", config = require("config-lsp")}
+	use {"jose-elias-alvarez/null-ls.nvim", requires = {"nvim-lua/plenary.nvim", "lewis6991/gitsigns.nvim"}, config = require("config-null-ls")}
 	use {"hrsh7th/nvim-cmp", requires = { "hrsh7th/vim-vsnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp" }, config = require("config-cmp")}	
 	use {"onsails/lspkind-nvim"}
 	use {"~/.fzf"}
@@ -21,4 +22,5 @@ return require("packer").startup(function()
 	use {"phaazon/hop.nvim", config = require("config-hop")}
 	use {"junegunn/vim-easy-align"}
 	use {"editorconfig/editorconfig-vim"}
+	use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = require("config-trouble")}
 end)

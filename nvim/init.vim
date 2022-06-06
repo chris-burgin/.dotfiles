@@ -63,6 +63,9 @@ command Q q
 " Test focus commands
 command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
 
+" snake to camel
+command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
+
 " ZSH working in vim
 " set shell=zsh\ -i
 

@@ -6,7 +6,6 @@ return function()
 	require'lsp/svelte'
 
 	-- other
-	require'lsp/diagnostics'
 	require'lsp/icons'
 	require'lsp/mappings'
 end
