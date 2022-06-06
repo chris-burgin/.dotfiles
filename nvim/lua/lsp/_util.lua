@@ -31,13 +31,6 @@ function util.on_attach(client, bufnr)
 	if is_typescript(ft) then
     -- Disable formatting via tsserver because we're handling formatting via null-ls
     client.resolved_capabilities.document_formatting = false
-
-    vim.cmd([[
-      augroup fmt
-        autocmd!
-        autocmd BufWritePre * TSFormat
-      augroup END
-    ]])
   end
 
 	-- Highlight word under cursor, see lua/config-illuminate.lua for more.
