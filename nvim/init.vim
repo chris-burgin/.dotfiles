@@ -47,6 +47,9 @@ noremap <Leader>k :cp<CR>
 noremap <C-j> :lne<CR>
 noremap <C-k> :lp<CR>
 
+" Dont show the command line unless in use
+set cmdheight=0
+
 " Highlight the current line the cursor is on.
 set cursorline
 

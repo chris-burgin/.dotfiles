@@ -24,3 +24,4 @@ return require("packer").startup(function()
   use {"mhinz/vim-signify"}
   use {"wbthomason/packer.nvim"}
 end)
+
