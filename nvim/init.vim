@@ -73,4 +73,4 @@ command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
 lua require'config'
 
 " custom theme colors
-highlight LspDiagnosticsDefaultError guifg=#d70000
+" highlight LspDiagnosticsDefaultError guifg=#d70000

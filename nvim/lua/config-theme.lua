@@ -1,4 +1,4 @@
 return function()
-	vim.cmd("colorscheme PaperColor")
+	vim.cmd("colorscheme dayfox")
 end
 

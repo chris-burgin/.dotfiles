@@ -1,8 +1,6 @@
 return require("packer").startup(function()
 	use {"RRethy/vim-illuminate", config = require("config-illuminate")}
-	use {"chris-burgin/background.nvim", config = require("config-background")}
-	use {"chris-burgin/papercolor-theme", config = require("config-theme")}
-	use {"chris-burgin/query.nvim", requires = {{"nvim-lua/plenary.nvim"}}, config = require("config-query")}
+	use { "EdenEast/nightfox.nvim", config = require("config-theme") }
 	use {"editorconfig/editorconfig-vim"}
 	use {"folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons", config = require("config-trouble")}
 	use {"hoob3rt/lualine.nvim", config = require("config-lualine")}
