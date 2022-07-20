@@ -68,6 +68,7 @@ export B5THROTTLER_ENABLED='false'
 export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
+alias b5prep="ds && dcu && make clean all"
 alias mtui="make client/web-ui/test"
 
 ## Knox
@@ -81,3 +82,7 @@ gmb () {
 
 # adds options to zoom
 alias zooom="zoom --disable-seccomp-filter-sandbox &"
+
+# deno
+export DENO_INSTALL="/home/chrisburgin/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
