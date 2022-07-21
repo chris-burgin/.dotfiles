@@ -2,8 +2,8 @@
 cd /home/chrisburgin/backup
 
 # files to copy 
-cp -rf ~/.config/nvim .
-cp -rf ~/.config/kitty .
+cp -rf ~/.config/nvim ./.config/nvm
+cp -rf ~/.config/kitty ./.config/kitty
 cp -f ~/.tmux.conf .
 cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
