@@ -13,7 +13,6 @@ alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
 
 # path
-export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export MYSQL_ROOT_PASSWORD=""
 
 # nvim
@@ -49,11 +48,11 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
 # docker
-alias ds="sudo systemctl start docker"
-alias dc="sudo docker-compose"
-alias dcu="sudo docker-compose --profile linux up -d"
-alias dcd="sudo docker-compose down"
-alias dps="sudo docker-compose ps"
+# alias ds="sudo systemctl start docker"
+# alias dc="sudo docker-compose"
+# alias dcu="sudo docker-compose --profile linux up -d"
+# alias dcd="sudo docker-compose down"
+# alias dps="sudo docker-compose ps"
 
 # NVM (node version manager): Allows quickly switching the node version.
 export NVM_DIR="$HOME/.nvm"
@@ -66,6 +65,7 @@ export B5BUGSNAG_ENABLED='false'
 export B5BUGSNAG_APIKEY=''
 export B5THROTTLER_ENABLED='false'
 export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
+export B5_HTTP_LISTEN="0.0.0.0:3005"
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 alias b5prep="ds && dcu && make clean all"
@@ -86,3 +86,7 @@ alias zooom="zoom --disable-seccomp-filter-sandbox &"
 # deno
 export DENO_INSTALL="/home/chrisburgin/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+# docker
+export PATH=/usr/bin:$PATH
+# export DOCKER_HOST=unix:///run/user/1000/docker.sock
