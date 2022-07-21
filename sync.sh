@@ -2,14 +2,14 @@
 cd /home/chrisburgin/backup
 
 # files to copy 
-cp -rf ~/.config/nvim ./.config
-cp -rf ~/.config/kitty ./.config
+cp -f ~/.config/nvim ./.config
+cp -f ~/.config/kitty ./.config
 cp -f ~/.tmux.conf .
 cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
 
 cp -f ~/.local/bin/muxup .
-cp -rf ~/.config/muxup ./.config
+cp -f ~/.config/muxup ./.config
 
 # check if there are changes
 if [[ -z $(git status -s) ]] 
