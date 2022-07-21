@@ -3,6 +3,7 @@ cd /home/chrisburgin/backup
 
 # clear config files because of weird double copy thing
 rm -rf ./.config
+mkdir ./.config
 
 # files to copy 
 cp -rf ~/.config/nvim ./.config/nvim
