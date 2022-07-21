@@ -9,7 +9,7 @@ cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
 
 cp -f ~/.local/bin/muxup .
-cp -f ~/.config/muxup .
+cp -f ~/.config/muxup muxup_conf
 
 # check if there are changes
 if [[ -z $(git status -s) ]] 
