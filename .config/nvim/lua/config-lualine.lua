@@ -9,15 +9,15 @@ return function()
 			lualine_b = {{'filename', path=1}, },
 			lualine_c = {},
 			lualine_x = {},
-			lualine_y = {'branch'},
-			lualine_z = {{'diagnostics', sources = {'nvim_diagnostic'}}, 'location'}
+			lualine_y = {'branch', {'diagnostics', sources = {'nvim_diagnostic'}}},
+			lualine_z = {'location'}
 		},
 		inactive_sections = {
 			lualine_a = {'mode'},
 			lualine_b = {{'filename', path=1}},
 			lualine_c = {},
 			lualine_x = {},
-			lualine_y = {'branch'},
+			lualine_y = {'branch', {'diagnostics', sources = {'nvim_diagnostic'}}},
 			lualine_z = {'location'}
 		},
 	})

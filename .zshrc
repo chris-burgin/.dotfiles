@@ -50,7 +50,7 @@ export PATH=$PATH:$HOME/.yarn/bin
 # docker
 # alias ds="sudo systemctl start docker"
 # alias dc="sudo docker-compose"
-# alias dcu="sudo docker-compose --profile linux up -d"
+alias dcu="docker-compose --profile linux up -d"
 # alias dcd="sudo docker-compose down"
 # alias dps="sudo docker-compose ps"
 
@@ -65,7 +65,7 @@ export B5BUGSNAG_ENABLED='false'
 export B5BUGSNAG_APIKEY=''
 export B5THROTTLER_ENABLED='false'
 export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
-export B5_HTTP_LISTEN="0.0.0.0:3005"
+# export B5_HTTP_LISTEN="0.0.0.0:3005"
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 alias b5prep="ds && dcu && make clean all"

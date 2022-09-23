@@ -9,13 +9,3 @@ for f in *.sh; do
 		tmux new-session -d -c $tmp_dir -s $tmp_name
 		tmux send-keys -t b5 "sh ~/.config/muxup/${f}" Enter
 done
-
-# # B5
-# cd ~/go/src/go.1password.io/b5/
-# # tmux new-session -d -s b5 'sh ~/.config/muxup/b5.sh'
-# tmux new-session -d -s b5 
-# tmux send-keys -t b5 "sh ~/.config/muxup/b5.sh" Enter
-
-# # Knox
-# cd ~/development/knox
-# tmux new-session -d -s knox
