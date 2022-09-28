@@ -21,5 +21,6 @@ return require("packer").startup(function()
   -- use {"mhinz/vim-signify"}
   use {"wbthomason/packer.nvim"}
 	use {"lewis6991/gitsigns.nvim", config = require("config-gitsigns")}
+	use {"norcalli/nvim-colorizer.lua", config = require("config-colorizer")}
 end)
 
