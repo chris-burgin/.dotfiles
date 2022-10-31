@@ -10,11 +10,10 @@ return function()
 
 					require("null-ls").builtins.formatting.prettierd,
 
-					require("null-ls").builtins.diagnostics.eslint_d,
 					require("null-ls").builtins.code_actions.eslint_d,
 					require("null-ls").builtins.formatting.eslint_d,
+					require("null-ls").builtins.diagnostics.eslint_d,
 
-					require("null-ls").builtins.completion.spell,
 			},
 			on_attach = function(client, bufnr)
         if client.supports_method("textDocument/formatting") then
