@@ -12,7 +12,7 @@ set nowrap
 set number relativenumber
 autocmd TermOpen * setlocal nonumber norelativenumber
 
-" Don't abandom buffers when hidden.
+" Don't abandon buffers when hidden.
 set hidden 
 
 " Time to write swap, speeds up many plugins.
@@ -60,9 +60,6 @@ set nofoldenable
 " Map Q to q to deal with my constant fat fingering.
 command Q q
 
-" Test focus commands
-command! Nof %s/\(it\|describe\|test\)\zs\.only\ze//g
-
 " snake to camel
 command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
 
@@ -71,6 +68,3 @@ command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
 
 " Plugins
 lua require'config'
-
-" custom theme colors
-" highlight LspDiagnosticsDefaultError guifg=#d70000
