@@ -7,7 +7,6 @@ source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
-
 # git
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
@@ -21,7 +20,7 @@ export EDITOR=nvim
 alias clearswap="rm -rf ~/.local/share/nvim/swap/*"
 
 # tmux
-alias ta="tmux a -t"
+alias t="tmux a -t"
 
 # bat: Used by nvim for file preview. Handled highlighting.
 export BAT_THEME="base16"
@@ -37,7 +36,6 @@ fpath+=${ZDOTDIR:-~}/.zsh_functions
 # backup: Backup script that syncs all of my important files
 alias backup="sh ~/backup/sync.sh"
 
-
 # golang
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -50,7 +48,7 @@ export PATH=$PATH:$HOME/.yarn/bin
 # docker
 # alias ds="sudo systemctl start docker"
 # alias dc="sudo docker-compose"
-alias dcu="docker-compose --profile linux up -d"
+# alias dcu="docker-compose --profile linux up -d"
 # alias dcd="sudo docker-compose down"
 # alias dps="sudo docker-compose ps"
 
@@ -74,14 +72,6 @@ alias mtui="make client/web-ui/test"
 ## Knox
 export knoxdir="~/development/knox"
 alias cdknox="cd $knoxdir"
-
-# functions
-gmb () {
-	git checkout -b "burg/$1/$2"
-}
-
-# adds options to zoom
-alias zooom="zoom --disable-seccomp-filter-sandbox &"
 
 # deno
 export DENO_INSTALL="/home/chrisburgin/.deno"
