@@ -18,7 +18,6 @@ return require("packer").startup(function()
 	use {"tpope/vim-surround"}
 	use {"tpope/vim-vinegar"}
 	use {"~/.fzf"}
-	use {'kdheepak/lazygit.nvim'}
   use {"wbthomason/packer.nvim"}
 	use {"mileszs/ack.vim"}
 end)
