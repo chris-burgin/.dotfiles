@@ -11,14 +11,15 @@ return require("packer").startup(function()
 	use {"neovim/nvim-lspconfig", config = require("config-lsp")}
 	use {"norcalli/nvim-colorizer.lua", config = require("config-colorizer")}
 	use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate", config = require("config-treesitter")}
-	use {"onsails/lspkind-nvim"}
-	use {"tpope/vim-commentary"}
+	use "onsails/lspkind-nvim"
+	use "tpope/vim-commentary"
 	use {"tpope/vim-fugitive", config = require("config-fugitive")}
-	use {"tpope/vim-sensible"}
-	use {"tpope/vim-surround"}
-	use {"tpope/vim-vinegar"}
-	use {"~/.fzf"}
-  use {"wbthomason/packer.nvim"}
-	use {"mileszs/ack.vim"}
+	use "tpope/vim-sensible"
+	use "tpope/vim-surround"
+	use "tpope/vim-vinegar"
+	use "~/.fzf"
+  use "wbthomason/packer.nvim"
+	use "mileszs/ack.vim"
+	use {"LunarVim/peek.lua", config = require("config-peek")}
 end)
 
