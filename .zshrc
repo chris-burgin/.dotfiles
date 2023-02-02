@@ -1,6 +1,7 @@
 # zsh
 ZSH_DISABLE_COMPFIX=true
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="fwalch"
 plugins=(git npm)
 export ZSH="/home/chrisburgin/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
