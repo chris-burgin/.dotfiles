@@ -1,11 +1,11 @@
 return function()
-	-- languages
-	require'lsp/golang'
-	require'lsp/css'
-	require'lsp/typescript'
-	require'lsp/svelte'
+    -- languages
+    require("lsp/golang")
+    require("lsp/css")
+    require("lsp/typescript")
+    require("lsp/svelte")
 
-	-- other
-	require'lsp/icons'
-	require'lsp/mappings'
+    -- other
+    require("lsp/icons")
+    require("lsp/mappings")
 end

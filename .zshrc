@@ -41,6 +41,7 @@ alias backup="sh ~/backup/sync.sh"
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export GOBIN=$GOPATH/bin
+export PATH=$PATH:/usr/local/go/bin
 
 # yarn
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -64,7 +65,6 @@ export B5BUGSNAG_ENABLED='false'
 export B5BUGSNAG_APIKEY=''
 export B5THROTTLER_ENABLED='false'
 export B5_ASSETS_SURVEY_ORIGIN="https://survey.b5local.com:3333"
-# export B5_HTTP_LISTEN="0.0.0.0:3005"
 export b5dir="~/go/src/go.1password.io/b5/"
 alias cdb5="cd $b5dir"
 alias b5prep="ds && dcu && make clean all"
