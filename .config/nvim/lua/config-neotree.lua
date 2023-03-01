@@ -9,7 +9,13 @@ return function()
                        {text = "", texthl = "DiagnosticSignHint"})
 
     require("neo-tree").setup({
-        filesystem = {follow_current_file = true, use_libuv_file_watcher = true},
+        filesystem = {
+            follow_current_file = true,
+            use_libuv_file_watcher = true,
+            hijack_netrw_behavior = "disabled",
+            bind_to_cwd = false,
+            filtered_items = {hide_dotfiles = false}
+        },
         buffers = {follow_current_file = true}
     })
 
