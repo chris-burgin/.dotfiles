@@ -63,9 +63,6 @@ command Q q
 " snake to camel
 command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
 
-" ZSH working in vim
-" set shell=zsh\ -i
-
 " Plugins
 lua require'config'
 

@@ -1,48 +1,46 @@
+local function config(name) return require("config-" .. name) end
+
 return require("packer").startup(function()
-    use({"EdenEast/nightfox.nvim", config = require("config-theme")})
-    use({"RRethy/vim-illuminate", config = require("config-illuminate")})
-    use({"editorconfig/editorconfig-vim"})
+    -- Resets
+    use("tpope/vim-vinegar")
+    use("tpope/vim-sensible")
+
+    -- Colorscheme
+    use({"EdenEast/nightfox.nvim", config = config("theme")})
+
+    -- UI
+    use({"goolord/alpha-nvim", config = config("alpha")})
+    use({"hoob3rt/lualine.nvim", config = config("lualine")})
+
+    -- Treesitter
     use({
-        "folke/trouble.nvim",
-        requires = "kyazdani42/nvim-web-devicons",
-        config = require("config-trouble")
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+        config = config("treesitter")
     })
-    use({"hoob3rt/lualine.nvim", config = require("config-lualine")})
+
+    -- LSP
+    use({"neovim/nvim-lspconfig", config = config("lsp")})
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = {"nvim-lua/plenary.nvim"},
+        config = config("null-ls")
+    })
     use({
         "hrsh7th/nvim-cmp",
         requires = {
             "hrsh7th/vim-vsnip", "hrsh7th/cmp-buffer", "hrsh7th/cmp-nvim-lsp"
         },
-        config = require("config-cmp")
+        config = config("cmp")
     })
-    use({
-        "jose-elias-alvarez/null-ls.nvim",
-        requires = {"nvim-lua/plenary.nvim"},
-        config = require("config-null-ls")
-    })
-    use({"junegunn/fzf.vim", config = require("config-fzf")})
-    use({"lewis6991/gitsigns.nvim", config = require("config-gitsigns")})
-    use({"neovim/nvim-lspconfig", config = require("config-lsp")})
-    use({"norcalli/nvim-colorizer.lua", config = require("config-colorizer")})
-    use({
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-        config = require("config-treesitter")
-    })
-    use("onsails/lspkind-nvim")
-    use("tpope/vim-commentary")
-    use({"tpope/vim-fugitive", config = require("config-fugitive")})
-    use("tpope/vim-sensible")
-    use("tpope/vim-surround")
-    use("tpope/vim-vinegar")
-    use("~/.fzf")
-    use("wbthomason/packer.nvim")
+
+    -- Editor
     use("mileszs/ack.vim")
-    use({"LunarVim/peek.lua", config = require("config-peek")})
+    use("onsails/lspkind-nvim")
     use({
-        "windwp/nvim-spectre",
-        requires = {"nvim-lua/plenary.nvim"},
-        config = require("config-spectre")
+        "folke/trouble.nvim",
+        requires = "kyazdani42/nvim-web-devicons",
+        config = config("trouble")
     })
     use({
         "nvim-neo-tree/neo-tree.nvim",
@@ -51,7 +49,26 @@ return require("packer").startup(function()
             "nvim-lua/plenary.nvim", "nvim-tree/nvim-web-devicons",
             "MunifTanjim/nui.nvim"
         },
-        config = require("config-neotree")
+        config = config("neotree")
     })
-    use({"goolord/alpha-nvim", config = require("config-alpha")})
+    use({"norcalli/nvim-colorizer.lua", config = config("colorizer")})
+    use({
+        "windwp/nvim-spectre",
+        requires = {"nvim-lua/plenary.nvim"},
+        config = config("spectre")
+    })
+    use({"LunarVim/peek.lua", config = config("peek")})
+    use({"RRethy/vim-illuminate", config = config("illuminate")})
+    use({"editorconfig/editorconfig-vim"})
+    use({"junegunn/fzf.vim", config = config("fzf")})
+    use("~/.fzf")
+    use({"lewis6991/gitsigns.nvim", config = config("gitsigns")})
+
+    -- Coding
+    use("tpope/vim-surround")
+    use("tpope/vim-commentary")
+    use({"tpope/vim-fugitive", config = config("fugitive")})
+
+    -- Util
+    use("wbthomason/packer.nvim")
 end)
