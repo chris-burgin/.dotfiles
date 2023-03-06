@@ -63,6 +63,7 @@ return require("packer").startup(function()
     use({"junegunn/fzf.vim", config = config("fzf")})
     use("~/.fzf")
     use({"lewis6991/gitsigns.nvim", config = config("gitsigns")})
+    use({"echasnovski/mini.nvim", branch = "stable", config = config("mini")})
 
     -- Coding
     use("tpope/vim-surround")
