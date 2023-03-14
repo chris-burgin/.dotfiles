@@ -60,10 +60,18 @@ return require("packer").startup(function()
     use({"LunarVim/peek.lua", config = config("peek")})
     use({"RRethy/vim-illuminate", config = config("illuminate")})
     use({"editorconfig/editorconfig-vim"})
-    use({"junegunn/fzf.vim", config = config("fzf")})
-    use("~/.fzf")
+    -- use({"junegunn/fzf.vim", config = config("fzf")})
+    -- use("~/.fzf")
     use({"lewis6991/gitsigns.nvim", config = config("gitsigns")})
     use({"echasnovski/mini.nvim", branch = "stable", config = config("mini")})
+    use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
+    use({"nvim-telescope/telescope-ui-select.nvim"})
+    use({
+        "nvim-telescope/telescope.nvim",
+        tag = "0.1.1",
+        requires = {{"nvim-lua/plenary.nvim"}},
+        config = config("telescope")
+    })
 
     -- Coding
     use("tpope/vim-surround")
