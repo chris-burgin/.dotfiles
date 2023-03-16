@@ -9,7 +9,6 @@ return require("packer").startup(function()
     use({"EdenEast/nightfox.nvim", config = config("theme")})
 
     -- UI
-    use({"goolord/alpha-nvim", config = config("alpha")})
     use({"hoob3rt/lualine.nvim", config = config("lualine")})
 
     -- Treesitter

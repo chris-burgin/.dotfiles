@@ -20,5 +20,4 @@ return function()
     })
 
     vim.cmd([[nnoremap \ :NeoTreeRevealToggle<cr>]])
-    vim.cmd([[nnoremap <leader>\ :NeoTreeFocus<cr>]])
 end
