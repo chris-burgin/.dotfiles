@@ -1,6 +1,3 @@
-local util = require('lsp/_util')
+local util = require("lsp/_util")
 
-require'lspconfig'.tsserver.setup({
-	on_attach = util.on_attach,
-})
-
+require("lspconfig").tsserver.setup({on_attach = util.on_attach})

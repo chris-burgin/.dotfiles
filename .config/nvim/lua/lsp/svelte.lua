@@ -1,5 +1,3 @@
-local util = require('lsp/_util')
+local util = require("lsp/_util")
 
-require'lspconfig'.svelte.setup{
-	on_attach = util.on_attach,
-}
+require("lspconfig").svelte.setup({on_attach = util.on_attach})

@@ -1,4 +1,1 @@
-return function()
-	vim.cmd("colorscheme dayfox")
-end
-
+return function() vim.cmd("colorscheme dayfox") end
