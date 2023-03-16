@@ -60,8 +60,6 @@ return require("packer").startup(function()
     use({"LunarVim/peek.lua", config = config("peek")})
     use({"RRethy/vim-illuminate", config = config("illuminate")})
     use({"editorconfig/editorconfig-vim"})
-    -- use({"junegunn/fzf.vim", config = config("fzf")})
-    -- use("~/.fzf")
     use({"lewis6991/gitsigns.nvim", config = config("gitsigns")})
     use({"echasnovski/mini.nvim", branch = "stable", config = config("mini")})
     use({"nvim-telescope/telescope-fzf-native.nvim", run = "make"})
@@ -76,7 +74,7 @@ return require("packer").startup(function()
     -- Coding
     use("tpope/vim-surround")
     use("tpope/vim-commentary")
-    use({"tpope/vim-fugitive", config = config("fugitive")})
+    use("tpope/vim-fugitive")
 
     -- Util
     use("wbthomason/packer.nvim")
