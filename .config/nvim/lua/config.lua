@@ -34,7 +34,6 @@ return require("packer").startup(function()
     })
 
     -- Editor
-    use("mileszs/ack.vim")
     use("onsails/lspkind-nvim")
     use({
         "folke/trouble.nvim",

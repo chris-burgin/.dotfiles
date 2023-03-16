@@ -65,8 +65,3 @@ command! -range SnakeToCamel '<,'>s/-\(.\)/\U\1/g
 
 " Plugins
 lua require'config'
-
-" set Ack to use ag
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
