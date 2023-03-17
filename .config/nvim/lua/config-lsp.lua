@@ -6,13 +6,13 @@ return function()
     require("lsp/svelte")
 
     -- mappings
-    vim.keymap.set("n", "sd", vim.diagnostic.open_float, {})
-    vim.keymap.set("n", "gn", vim.diagnostic.goto_next, {})
-    vim.keymap.set("n", "gp", vim.diagnostic.goto_prev, {})
-    vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-    vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, {})
-    vim.keymap.set("n", "<C-K>", vim.lsp.buf.signature_help, {})
+    vim.keymap.set("n", "sd", vim.diagnostic.open_float)
+    vim.keymap.set("n", "gn", vim.diagnostic.goto_next)
+    vim.keymap.set("n", "gp", vim.diagnostic.goto_prev)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover)
+    vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+    vim.keymap.set("n", "<F2>", vim.lsp.buf.rename)
+    vim.keymap.set("n", "<C-K>", vim.lsp.buf.signature_help)
 
     -- icons
     require("lspkind").init({

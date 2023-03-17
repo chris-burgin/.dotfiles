@@ -8,8 +8,8 @@ return function()
     local illuminate = require("illuminate")
 
     vim.keymap.set("n", "<leader>n",
-                   function() illuminate.next_reference({wrap = true}) end, {})
+                   function() illuminate.next_reference({wrap = true}) end)
     vim.keymap.set("n", "<leader>p", function()
         illuminate.next_reference({reverse = true, wrap = true})
-    end, {})
+    end)
 end
