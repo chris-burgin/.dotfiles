@@ -6,7 +6,7 @@ return require("packer").startup(function()
     use("tpope/vim-sensible")
 
     -- Colorscheme
-    use({"EdenEast/nightfox.nvim", config = config("theme")})
+    use({"ellisonleao/gruvbox.nvim", config = config("theme")})
 
     -- UI
     use({"hoob3rt/lualine.nvim", config = config("lualine")})
@@ -68,6 +68,8 @@ return require("packer").startup(function()
         requires = {{"nvim-lua/plenary.nvim"}},
         config = config("telescope")
     })
+    use({"junegunn/fzf.vim"})
+    use("~/.fzf")
 
     -- Coding
     use("tpope/vim-surround")

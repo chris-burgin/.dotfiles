@@ -1,8 +1,11 @@
 # zsh
 ZSH_DISABLE_COMPFIX=true
-# ZSH_THEME="robbyrussell"
-ZSH_THEME="fwalch"
+
+ZSH_THEME="gruvbox"
+SOLARIZED_THEME="dark"
+
 plugins=(git npm)
+
 export ZSH="/home/chrisburgin/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
@@ -47,13 +50,6 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
-# docker
-# alias ds="sudo systemctl start docker"
-# alias dc="sudo docker-compose"
-# alias dcu="docker-compose --profile linux up -d"
-# alias dcd="sudo docker-compose down"
-# alias dps="sudo docker-compose ps"
-
 # NVM (node version manager): Allows quickly switching the node version.
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -80,4 +76,3 @@ export PATH="$DENO_INSTALL/bin:$PATH"
 
 # docker
 export PATH=/usr/bin:$PATH
-# export DOCKER_HOST=unix:///run/user/1000/docker.sock
