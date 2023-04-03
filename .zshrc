@@ -11,12 +11,6 @@ source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
-# git
-alias gca="git commit --amend"
-alias gcan="git commit --amend --no-edit"
-
-# path
-export MYSQL_ROOT_PASSWORD=""
 
 # nvim
 export PATH=$HOME/local/nvim/bin:$PATH # add nvim to the path
@@ -25,6 +19,9 @@ alias clearswap="rm -rf ~/.local/share/nvim/swap/*"
 
 # tmux
 alias t="tmux a -t"
+
+# mysql
+export MYSQL_ROOT_PASSWORD=""
 
 # bat: Used by nvim for file preview. Handled highlighting.
 export BAT_THEME="base16"
@@ -37,7 +34,7 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclu
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# backup: Backup script that syncs all of my important files
+# backup
 alias backup="sh ~/backup/sync.sh"
 
 # golang
@@ -50,12 +47,11 @@ export PATH=$PATH:/usr/local/go/bin
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=$PATH:$HOME/.yarn/bin
 
-# NVM (node version manager): Allows quickly switching the node version.
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# 1Password Projects
 ## B5
 export B5BUGSNAG_ENABLED='false'
 export B5BUGSNAG_APIKEY=''
@@ -69,6 +65,10 @@ alias mtui="make client/web-ui/test"
 ## Knox
 export knoxdir="~/development/knox"
 alias cdknox="cd $knoxdir"
+
+# Core
+export coredir="~/development/core"
+alias cdcore="cd $coredir"
 
 # deno
 export DENO_INSTALL="/home/chrisburgin/.deno"

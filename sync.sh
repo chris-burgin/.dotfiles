@@ -9,6 +9,7 @@ mkdir ./.config
 cp -rf ~/.config/nvim ./.config/nvim
 cp -rf ~/.config/kitty ./.config/kitty
 cp -f ~/.tmux.conf .
+cp -f ~/.wezterm.lua .
 cp -f ~/.zshrc .
 cp -f ~/.alacritty.yml .
 
