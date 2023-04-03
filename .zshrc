@@ -11,7 +11,6 @@ source $ZSH/oh-my-zsh.sh
 alias ezsh="nvim ~/.zshrc && source ~/.zshrc"
 alias szsh="source ~/.zshrc"
 
-
 # nvim
 export PATH=$HOME/local/nvim/bin:$PATH # add nvim to the path
 export EDITOR=nvim
