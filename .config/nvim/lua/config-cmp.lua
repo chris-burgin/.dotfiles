@@ -4,9 +4,14 @@ return function()
     local cmp_types = require("cmp.types.cmp")
 
     cmp.setup({
+        -- snippet = {
+        --     expand = function(args)
+        --         vim.fn["vsnip#anonymous"](args.body)
+        --     end
+        -- },
         snippet = {
             expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body)
+                require("luasnip").lsp_expand(args.body)
             end
         },
         mapping = {
@@ -18,7 +23,7 @@ return function()
                 behavior = cmp_types.SelectBehavior.Insert
             })
         },
-        sources = {{name = "nvim_lsp"}, {name = "buffer"}},
+        sources = {{name = "nvim_lsp"}, {name = "buffer"}, {name = "luasnip"}},
         formatting = {
             format = lspkind.cmp_format({
                 with_text = true,

@@ -18,6 +18,15 @@ return require("packer").startup(function()
         config = config("treesitter")
     })
 
+    -- Snipits
+    use("rafamadriz/friendly-snippets")
+    use("saadparwaiz1/cmp_luasnip")
+    use({
+        "L3MON4D3/LuaSnip",
+        run = "make install_jsregexp",
+        config = config("luasnip")
+    })
+
     -- LSP
     use({"neovim/nvim-lspconfig", config = config("lsp")})
     use({
