@@ -33,6 +33,11 @@ return require("packer").startup(function()
         config = config("cmp")
     })
 
+    use({
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        config = config("lsp-lines")
+    })
+
     -- Editor
     use("onsails/lspkind-nvim")
     use({
