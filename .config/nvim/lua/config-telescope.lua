@@ -1,6 +1,6 @@
 return function()
     require("telescope").setup({
-        defaults = {path_display = {"smart"}},
+        defaults = {path_display = {"truncate"}},
         pickers = {
             find_files = {theme = "dropdown"},
             live_grep = {theme = "dropdown"},
